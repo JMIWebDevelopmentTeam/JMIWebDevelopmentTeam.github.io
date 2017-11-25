@@ -1,0 +1,210 @@
+#jmilogo{
+    height:50px;
+    width:50px;
+    vertical-align: middle;
+    margin-bottom:6px;
+    margin-right: 2px;
+    margin-left: 0px;
+}
+#slide1{
+    height:400px;
+    background-image:url('../images/slide1.jpeg');
+    background-size: contain;
+
+    background-repeat: no-repeat;
+    background-position: center left;
+    vertical-align: middle;
+
+}
+#slide2{
+    height:500px;
+    background-image:url('../images/slide2.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    background-position: center left;
+
+}
+#slide2 p{
+    vertical-align: middle;
+
+}
+#slide3{
+    background-size: contain;
+    height:500px;
+    background-image:url('../images/slide3.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center left;
+    vertical-align: middle;
+
+
+}
+.carousel {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.navbar {
+    position:fixed;
+    top:0;
+    z-index:10;
+    border: 0px;
+    margin-bottom:0px;
+
+    background:rgba(0,0,0,0.6);
+    width:99%;
+}
+body{
+    height: 100%;
+    width:100%;
+    padding:5px 5px;
+    overflow-x: hidden;
+}
+.row{
+    padding: 20px ;
+    margin-bottom: 0px;
+}
+.headingh2{
+    padding: 2px 2px;
+    margin: 2px;
+}
+.borderCol{
+border: 2px solid #ebebe0;
+    border-radius:5px;
+    padding: 8px;
+    background-color: #ffffff;
+}
+.borderCol:hover{
+    border-top: 5px solid #00ffff;
+}
+#research{
+    background-color:#204060;
+    height: 100%;
+}
+.col-md-4{
+    margin-bottom: 5px;
+}
+.outline{
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+/*CAROUSEL CODE*/
+@media (min-device-width:700px) {
+    .carousel-caption{
+        /*top: 30px;*/
+        /*right:0;*/
+        /*bottom: auto;*/
+        /*text-align: center;*/
+
+    }
+    .textBackground {
+        text-align: right;
+        vertical-align:middle ;
+    }
+}
+
+
+/*FOOTER CODE*/
+
+.footer-distributed{
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: normal 16px sans-serif;
+
+    padding: 45px 50px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left p{
+    color:  #8f9296;
+    font-size: 10px;
+    margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links{
+    font-size:14px;
+    font-weight: bold;
+    color:  #ffffff;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:  inherit;
+}
+
+.footer-distributed .footer-right{
+    float: right;
+    margin-top: 6px;
+    max-width: 180px;
+}
+
+.footer-distributed .footer-right a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color:  #33383b;
+    border-radius: 2px;
+
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 3px;
+}
+
+
+@media (max-width: 600px) {
+
+    #jmilogo{
+        height:20px;
+        width:20px;
+        vertical-align: middle;
+        margin:0px;
+        margin-left: 0px;
+    }
+.carousel-caption p{
+    font-size: 10px;
+}
+    .carousel-caption a{
+        font-size: 10px;
+    }
+    .carousel-caption h1{
+        font-size: 15px;
+    }
+#myCarousel .container{
+    height: auto;
+}
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-right{
+        text-align: center;
+    }
+
+    .footer-distributed .footer-right{
+        float: none;
+        margin: 0 auto 20px;
+    }
+
+    .footer-distributed .footer-left p.footer-links{
+        line-height: 1.8;
+    }
+}
+
+
+.newsCol:hover{
+    border:2px solid #8f9296;
+}
+
+
+
+
+
+
