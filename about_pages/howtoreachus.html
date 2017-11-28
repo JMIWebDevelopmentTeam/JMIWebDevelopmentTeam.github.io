@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>How to reach us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+<div class="page-header">
+    <h1>How to Reach Us</h1>
+</div>
+
+<!-- Contact with Map - START -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="well well-sm">
+                <p>Jamia Millia Islamia is located on the south-east corner of Delhi, near various beautiful places such as Lodhi Garden, Chattarpur Mandir and Lotus Temple. One may reach the University by road or by metro. It is well-connected and one may take any of the following routes to reach it:
+</br><h4>New Delhi Railway Station</h4>
+It takes a little under an hour to travel the 13.3 km between the station and the university, via Mathura road. Buses, cab, auto rickshaws, etc. are the various modes one may choose to cover the distance, if there is no private vehicle available at disposal.
+</br><h4>Indira Gandhi International Airport</h4>
+The 19 kilometers between the airport and university usually required an hour to commute via road. 
+</br><h4>Metro</h4>
+Until the magenta line metro which has a Jamia Nagar metro station is under construction, the nearest metro station remains to be Govindpuri metro station on the violet line. It is less than 4km away from the university and takes approximately 10 minutes to reach via road. 
+</br><h4>Bus Stations</h4>
+There are numerous bus stops at and near the University that help enhance the connectivity between Jamia and the rest of the city.
+</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div>
+                <div class="panel panel-default">
+                    <div class="text-center header">Department Address</div>
+                    <div class="panel-body text-center">
+                        <div>
+                        Jamia Nagar<br />
+                        New Delhi, Delhi 110025<br />
+                        011 2698 1717<br />
+                        mdoja@jmi.ac.in<br />
+                        </div>
+                        <hr />
+                        <div id="map1" class="map">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        function init_map1() {
+            var myLocation = new google.maps.LatLng(28.5601654,77.2794684);
+            var mapOptions = {
+                center: myLocation,
+                zoom: 16
+            };
+            var marker = new google.maps.Marker({
+                position: myLocation,
+                title: "Property Location"
+            });
+            var map = new google.maps.Map(document.getElementById("map1"),
+                mapOptions);
+            marker.setMap(map);
+        }
+        init_map1();
+    });
+</script>
+
+<style>
+body
+    {background-image: url("8.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+	}
+    .map {
+        min-width: 300px;
+        min-height: 300px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header {
+        background-color: #F5F5F5;
+        color: #36A0FF;
+        height: 70px;
+        font-size: 27px;
+        padding: 10px;
+    }
+</style>
+
+<!-- Contact with Map - END -->
+
+</div>
+
+</body>
+</html>
