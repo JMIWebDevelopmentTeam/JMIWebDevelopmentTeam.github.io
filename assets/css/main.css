@@ -202,3 +202,13 @@ border: 2px solid #ebebe0;
 .newsCol:hover{
     border:2px solid #8f9296;
 }
+
+/*======================hr=================*/
+hr.style-five {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px black;
+}
+hr.style-five:after {
+    content: "\00a0";
+}
