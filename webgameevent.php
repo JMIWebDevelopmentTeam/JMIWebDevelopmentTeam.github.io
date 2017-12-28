@@ -10,10 +10,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script> 
-$(function(){
-  $("#header").load("header.html"); 
-  $("#footer").load("footer.html"); 
-});
+jQuery(document).ready(function($) {
+  $('#header').load('header.html', function () {
+    console.log('header.html loaded')
+  });
+  $('#footer').load('footer.html', function () {
+    console.log('footer.html loaded')
+  });
+})
 </script>
 </head>
 <body style="margin-bottom: 0px;">
