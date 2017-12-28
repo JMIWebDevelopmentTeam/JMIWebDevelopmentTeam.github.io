@@ -13,11 +13,11 @@
 </head>
 <body style="margin-bottom: 0px;">
   
-<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="/assets/css/main.css" />
 
 
 <!--======================================NAVBAR STARTS HERE=============================================-->
-<div w3-include-html="header.html"></div>
+<div w3-include-html="/header.html"></div>
      <script>
 w3.includeHTML();
 </script>
@@ -66,77 +66,6 @@ w3.includeHTML();
 </div>
 
 <!--.........................................MODAL STARTS HERE.........................................-->
-<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Website Feedback</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email address:</label>
-                        <input type="email" class="form-control" id="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject:</label>
-                        <input type="text" class="form-control" id="subject">
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Description:</label>
-                        <input type="text" class="form-control" id="description">
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Reset</button>
-                <button type="button" class="btn btn-primary">Submit</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--.........................................MODAL ENDS HERE.........................................-->
-<!--............................FOOTER GOES HERE....................................................................-->
-<footer class="footer-distributed">
-
-    <div class="footer-right">
-
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-github"></i></a>
-
-    </div>
-
-    <div class="footer-left">
-
-        <p class="footer-links">
-            <a href="#">Home</a>
-            .
-            <a href="#">Contact Us</a>
-            .
-            <a href="#" role="button" data-toggle="modal" data-target="#feedbackModal">FeedBack</a>
-        </p>
-
-        <p>DEPARTMENT OF COMPUTER ENGINEERING,JAMIA MILLIA ISLAMIA, NEW DELHI<BR> &copy; 2017</p>
-    </div>
-
-</footer>
-
-
-
-
-<script src="assets/js/main.js"></script>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-
+<div w3-include-html="/footer.html"></div>
 </body>
 </html>
