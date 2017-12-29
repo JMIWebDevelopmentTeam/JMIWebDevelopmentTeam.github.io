@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Department of Computer Engineering,JMI</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.myImg {
+	content:url('/assets/images/pic.png');
+width:40px;
+height:20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.myImg:hover {opacity: 0.5;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 30%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 40px;
+    right: 450px;
+    color: #000000;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+</style>	
+</head>
+
+<body>
+<link rel="stylesheet" href="assets/css/main.css" />
+
+<!--======================================NAVBAR STARTS HERE=============================================-->
+<nav class="navbar navbar-default navbar-static">
+    <img style="float:left;" class="img-responsive img-circle" src="assets/images/jmilogo.jpg" id="jmilogo" >
+    <a id="titleJMI" class="navbar-brand" href="index.html" style="float: left;vertical-align: middle;"><u><strong> DEPARTMENT OF COMPUTER ENGINEERING,JMI</strong></u></a>
+
+    <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+    </div>
+    <div class="collapse navbar-collapse js-navbar-collapse" style="float: right;">
+
+        <ul class="nav navbar-nav">
+            <li class="dropdown dropdown-large">
+                <a href="index.html"><strong>Home</strong></a>
+            </li>
+            <li class="dropdown dropdown-large">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>About Us</strong> </a>
+
+                <ul class="dropdown-menu dropdown-menu-large row">
+                    <li class="col-sm-4">
+                        <h3 style="text-align:center;color:#404040;width: auto;margin-top:0px;"class="well well-sm"><strong>About Us</strong></h3>
+                    </li>
+                    <li class="col-sm-4">
+                        <ul style="list-style-type:circle">
+                            <li><a href="msgfromhod.html">- Message From HOD</a></li>
+                            <li><a href="mav.html">- Vission & Mission</a></li>
+                            <li><a href="#">- Achievements</a></li>
+                            <li><a href="#">- Facilities</a></li>
+                        </ul>
+                    </li>
+                    <li class="col-sm-4">
+                        <ul>
+                            <li><a href="contact.html">- Contact</a></li>
+                            <li><a href="howtoreachus.html">- Visiting Info</a></li>
+                            <li><a href="about.html">- About Jamia</a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+
+            </li>
+            <li class="dropdown dropdown-large">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>Academics</strong> </a>
+
+                <ul class="dropdown-menu dropdown-menu-large row">
+                    <li class="col-sm-8">
+                        <h3 style="text-align:center;color:#404040;width: auto;margin-top:0px;"class="well well-sm"><strong>Academics</strong></h3>
+
+                    </li>
+                    <li class="col-sm-4">
+                        <ul>
+                            <li><a href="btech_program.html">B.Tech</a></li>
+                            <li><a href="mtech_program.html">M.Tech</a></li>
+                            <li><a href="be_program.html">B.E.</a></li>
+                            <li><a href="phd_program.html">PhD</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+            <li class="dropdown dropdown-large">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>People</strong> </a>
+
+                <ul class="dropdown-menu dropdown-menu-large row">
+                    <li class="col-sm-5">
+                        <h4 style="text-align:center;color:#404040;width: auto;margin-top:0px;"class="well well-sm"><strong>People</strong></h4>
+
+                    </li>
+                    <li class="col-sm-7">
+                        <ul>
+                            <li><a href="teachers.html">- Faculty </a></li>
+                            <li><a href="#">- Research Scholars </a></li>
+                            <li><a href="students.html">- Students</a></li>
+                            <li><a href="#">- Staff</a></li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+
+            </li>
+            <li class="dropdown dropdown-large">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>Research </strong></a>
+
+                <ul class="dropdown-menu dropdown-menu-large row">
+                    <li class="col-sm-5">
+                        <h4 style="text-align:center;color:#404040;width: auto;margin-top:0px;"class="well well-sm"><strong>Research</strong></h4>
+
+                    </li>
+                    <li class="col-sm-7">
+                        <ul>
+                            <li><a href="#">- Areas </a></li>
+                            <li><a href="finalyearprojects.html">- Projects </a></li>
+                            <li><a href="#">- Publications</a></li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+
+            </li>
+            <li class="dropdown dropdown-large">
+                <a href="events.html"><strong>Events</strong></a>
+            </li>
+
+
+
+
+        </ul>
+
+    </div><!-- /.nav-collapse -->
+</nav>
+<!--======================================NAVBAR ENDS HERE=============================================-->
+<div class="w3-container" style="padding:60px 16px">
+
+<h2>B.E. 3rd year Students </h2>
+<div class="w3-responsive">
+<table class="w3-table-all w3-hoverable">
+<tr>
+  <th>Roll No.</th>
+  <th>Enrollment No.</th>
+  <th>Student ID</th>
+  <th>Name</th>
+  <th></th>
+  
+  
+</tr>
+<tr>
+  <th></th>
+  <th></th>
+  <th>15BCS8001</th>
+  <th>Aaisha Saeed</th>
+  <th><img class="myImg" src="http://placehold.it/300x300" alt="Aisha Saeed"></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8002</th>
+  <th>Adnan Raza</th>
+  <th><img class="myImg" src="http://placehold.it/300x300" alt="Adnan Raza" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8004</th>
+  <th>Ahbab Alam</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8005</th>
+  <th>Aleena Laique</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>16BCS0006</th>
+  <th>Bazm Fatima</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>16BCS0007</th>
+  <th>Fahad Ali Khan</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>16BCS0008</th>
+  <th>Faizan Alam</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8009</th>
+  <th>Hera Naushad</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8011</th>
+  <th>Javed Alam</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8012</th>
+  <th>Kuldeep Kumar</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8013</th>
+  <th>Md Danish Khan</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8014</th>
+  <th>Md. Faisal Ali</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8015</th>
+  <th>Md Iftekhar Ahmad</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8016</th>
+  <th>Md. Ikram</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8017</th>
+  <th>Md Saalik</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8018</th>
+  <th>Mohammad Sazzad Jafri</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8019</th>
+  <th>Mohd. Abid</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8020</th>
+  <th>Mohd. Abid Khan</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8021</th>
+  <th>Mohd. Danish</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8022</th>
+  <th>Mohd Mushir Rana</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8023</th>
+  <th>Mohd Naved Ansari</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8024</th>
+  <th>Nawaz Ashraf Khan</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8025</th>
+  <th>Nazia Mumtaz</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8027</th>
+  <th>Sania Zehra</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8028</th>
+  <th>Sara Kafeel</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8029</th>
+  <th>Sumbul</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8030</th>
+  <th>Vivek Sharma</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>15BCS8031</th>
+  <th>Wasiur Rahman</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+
+</table>
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+</div>
+
+
+<!--............................FOOTER GOES HERE....................................................................-->
+<footer class="footer-distributed">
+
+    <div class="footer-right">
+
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+
+    </div>
+
+    <div class="footer-left" >
+
+        <p class="footer-links">
+            <a href="#">Home</a>
+            .
+            <a href="#">Contact Us</a>
+            .
+            <a href="#" role="button" data-toggle="modal" data-target="#feedbackModal">FeedBack</a>
+        </p>
+
+        <p>DEPARTMENT OF COMPUTER ENGINEERING,JAMIA MILLIA ISLAMIA, NEW DELHI<BR> &copy; 2017</p>
+    </div>
+
+</footer>
+
+
+
+
+<script src="assets/js/main.js"></script>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = $('.myImg');
+var modalImg = $("#img01");
+var captionText = document.getElementById("caption");
+$('.myImg').click(function(){
+    modal.style.display = "block";
+    var newSrc = this.src;
+    modalImg.attr('src', newSrc);
+    captionText.innerHTML = this.alt;
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>
