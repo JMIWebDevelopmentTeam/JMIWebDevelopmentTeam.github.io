@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Department of Computer Engineering,JMI</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <script src="https://www.w3schools.com/lib/w3.js"></script>
+<style>
+.myImg {
+	content:url('/assets/images/pic.png');
+width:40px;
+height:20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.myImg:hover {opacity: 0.5;}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+}
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 30%;
+    max-width: 700px;
+}
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+/*
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 40px;
+    right: 35%;
+    color: #000000;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+</style>	
+</head>
+
+<body style="margin-bottom: 0px;">
+<link rel="stylesheet" href="/assets/css/main.css" />
+
+<!--======================================NAVBAR STARTS HERE=============================================-->
+<div w3-include-html="/header.html"></div>
+     <script>
+w3.includeHTML();
+</script>
+<!--======================================NAVBAR ENDS HERE=============================================-->
+<div class="w3-container" style="padding:60px 16px">
+
+<h2>B.E. 1st year Students </h2>
+<div class="w3-responsive">
+<table class="w3-table-all w3-hoverable">
+<tr>
+  <th>Enrollment No.</th>
+  <th>Student ID</th>
+  <th>Roll No.</th>
+  <th>Name</th>
+  <th></th>
+  
+  
+</tr>
+<tr>
+  <th></th>
+  <th></th>
+  <th>17BCS8002</th>
+  <th>Hasnain Arif</th>
+  <th><img class="myImg" src="http://placehold.it/300x300" alt=""></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8003</th>
+  <th>Amar Singh Meena</th>
+  <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8004</th>
+  <th>Zeebal Akhtar</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8005</th>
+  <th>Mohd Salman</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8006</th>
+  <th>Zaid Ahmad</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8007</th>
+  <th>Shaqib Siddiqui</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8008</th>
+  <th>Mohd junaid</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8009</th>
+  <th>Vikas Kumar</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8010</th>
+  <th>Shadan parvez</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8011</th>
+  <th>Atiq Ur Rehman</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8012</th>
+  <th>Mohd Aatif</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8013</th>
+  <th>Sadiq Izhar</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8014</th>
+  <th>Mohd Salman Qureshi</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8015</th>
+  <th>Ayesha Ghayas</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8016</th>
+  <th>Mohammad Siddique</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8018</th>
+  <th>Rahil</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8019</th>
+  <th>Ahsan Sarwar</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8020</th>
+  <th>Deepak Anand</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8021</th>
+  <th>Asif Reza</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8022</th>
+  <th>Zainab Fatima</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8023</th>
+  <th>Md Faiyaz Khan</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8024</th>
+  <th>Mohammad Faisal Khan</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8025</th>
+  <th>Mohd Aarif</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8026</th>
+  <th>Kahkasha Shams</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8027</th>
+  <th>Tabish Mahfuz</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8028</th>
+  <th>Zafar Siddiqui</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8029</th>
+  <th>Shikha Sharma</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8030</th>
+  <th>Javed Alam</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8031</th>
+  <th>Imran Khan</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8032</th>
+  <th>Ekram Ali</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8033</th>
+  <th>Shaheen Perveen</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8034</th>
+  <th>Mohd Qasim</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8035</th>
+  <th>Sumayya</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8036</th>
+  <th>Md Danish Alam</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8037</th>
+  <th>Mohd Arshad Zaidi</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr><tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8038</th>
+  <th>Nawazish Ahmad</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr><tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8039</th>
+  <th>Md Nadeem Zafar</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8043</th>
+  <th>Kusum Prabha</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8044</th>
+  <th>Mohd Mehboob</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr><tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8045</th>
+  <th>Mehreen Fatma</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr><tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8046</th>
+  <th>Abhilash Singh</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+<tr>
+ <th></th>
+  <th></th>
+  <th>17BCS8047</th>
+  <th>Md Asif Raza</th>
+   <th><img class="myImg" src="http://placehold.it/300x300" alt="" ></th>
+  
+  
+</tr>
+
+</table>
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+</div>
+
+<!--............................FOOTER GOES HERE....................................................................-->
+<div w3-include-html="/footer.html"></div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = $('.myImg');
+var modalImg = $("#img01");
+var captionText = document.getElementById("caption");
+$('.myImg').click(function(){
+    modal.style.display = "block";
+    var newSrc = this.src;
+    modalImg.attr('src', newSrc);
+    captionText.innerHTML = this.alt;
+});
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+
+
+</body>
+</html>
