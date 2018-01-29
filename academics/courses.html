@@ -14,7 +14,42 @@
 <body style="margin-bottom: 0px;">
   
 <link rel="stylesheet" href="/assets/css/main.css" />
+<style>
+* {
+  box-sizing: border-box;
+}
 
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
 
 <!--======================================NAVBAR STARTS HERE=============================================-->
 <div w3-include-html="/header.html"></div>
@@ -27,54 +62,59 @@ w3.includeHTML();
   <h2>Courses</h2>
   <p>The following courses are currently being offered in the Department of Computer Engineering.</p>
 
-  <table class="w3-table-all w3-card-4">
-    <tr>
-      <th>Course Code</th>
-      <th>Course Title</th>
-      <th>Teacher</th>
-    </tr>
-    <tr>
-      <th>CEN-401</th>
-      <th>Theory of Computation</th>
-      <th>Teacher</th>
-    </tr><tr>
-      <th>Course Code</th>
-      <th>Computer Networks</th>
-      <th>Teacher</th>
-    </tr><tr>
-      <th>Course Code</th>
-      <th>OPerating System</th>
-      <th>Teacher</th>
-    </tr><tr>
-      <th>Course Code</th>
-      <th>Object Oriented Programming</th>
-      <th>Teacher</th>
-    </tr><tr>
-      <th>Course Code</th>
-      <th>Data Structures</th>
-      <th>Teacher</th>
-    </tr><tr>
-      <th>Course Code</th>
-      <th>Design Of Algorithms</th>
-      <th>Teacher</th>
-    </tr><tr>
-      <th>Course Code</th>
-      <th>Database Management System</th>
-      <th>Teacher</th>
-    </tr><tr>
-      <th>Course Code</th>
-      <th>Discrete Mathematics</th>
-      <th>Teacher</th>
-    </tr><tr>
-      <th>Course Code</th>
-      <th>Digital Logic</th>
-      <th>Teacher</th>
-    </tr><tr>
-      <th>Course Code</th>
-      <th>Computer Architecture</th>
-      <th>Teacher</th>
-    </tr>
-  </table>
+  <input type="text" id="myInput" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Course Code</th>
+    <th style="width:40%;">Course Title</th>
+	<th style="width:40%;">Teacher</th>
+  </tr>
+<tr><td>CEN-401</td><td>	Computer Organization</td><td>	Mr Zeeshan Ansari</td></tr>
+<tr><td>CEN-402</td><td>	operating system</td><td>	Mr Shahzad Alam</td></tr>
+<tr><td>CEN-405</td><td>	Mathematics</td><td>	Applied Science </td></tr>
+<tr><td>CEN-406</td><td>	System Software</td><td>	Mr Danish Raza Rizvi</td></tr>
+<tr><td>CEN-407</td><td>	DBMS</td><td>	Mr Faiyaz Ahmad</td></tr>
+<tr><td>CEN-491</td><td>	Database Lab</td><td>	Mr Faiyaz Ahmad/Mr Zeeshan Ansari/Mr Shamim Ahmad</td></tr>
+<tr><td>CEN-492</td><td>	Linux Lab</td><td>	Mr Danish Raza Rizvi/Mr Zeeshan Ansari</td></tr>
+<tr><td>CEN-493</td><td>	OS Lab</td><td>	Mr Shahzad Alam</td></tr>
+<tr><td>CEN-601</td><td>	Computer Graphic</td><td>	HM</td></tr>
+<tr><td>CEN-602</td><td>	Software Engineering</td><td>	Mr Jawahar Lal</td></tr>
+<tr><td>CEN-603</td><td>	OOPS</td><td>	Mr Tanveer Ahmad</td></tr>
+<tr><td>CEN-604</td><td>	Computer Networking</td><td>	Mr Mumtaz Ahmad</td></tr>
+<tr><td>CEN-605</td><td>	Analysis and Design of Algorithm</td><td>	Mr Musheer Ahmad</td></tr>
+<tr><td>CEN-606</td><td>	Parallel and Distributed System</td><td>	Mr Danish Raza Rizvi</td></tr>
+<tr><td>CEN-607</td><td>	Language Processor</td><td>	Mr Sarfaraz Masood</td></tr>
+<tr><td>CEN-691</td><td>	Computer Networking Lab</td><td>	MA/Mr Shamim Ahmad</td></tr>
+<tr><td>CEN-692</td><td>	 OOPS Lab</td><td>	Mr Jawahar Lal/Mr Shamim Ahmad</td></tr>
+<tr><td>CEN-693</td><td>	Linux Utility Lab</td><td>	Mr Faiyaz Ahmad/Mr Shahzad Alam/Mr Shamim Ahmad</td></tr>
+<tr><td>CEN-802</td><td>	Aritificial Intelligence</td><td>	Mr Jawahar Lal</td></tr>
+<tr><td>CEN-803</td><td>	Software Project Managament</td><td>	Mr M.N.Doja</td></tr>
+<tr><td>CEN-804</td><td>	Distributed Processing</td><td>	Mr Bashir Alam</td></tr>
+<tr><td>CEN-805</td><td>	Network Security</td><td>	MA</td></tr>
+<tr><td>CEN-806</td><td>	Soft Computing</td><td>	Mr Musheer Ahmad</td></tr>
+<tr><td>CEN-891</td><td>	Main Project</td><td>	All Faculty</td></tr>
+<tr><td>CEN-892</td><td>	Software Project Managament Lab</td><td>	Mr M.N.Doja/Mr Bashir Alam</td></tr>
+</table>
+	
+<script>function filterTable(event) {
+    var filter = event.target.value.toUpperCase();
+    var rows = document.querySelector("#myTable tbody").rows;
+    
+    for (var i = 0; i < rows.length; i++) {
+        var firstCol = rows[i].cells[0].textContent.toUpperCase();
+        var secondCol = rows[i].cells[1].textContent.toUpperCase();
+        var thirdCol = rows[i].cells[2].textContent.toUpperCase();
+        if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1 || thirdCol.indexOf(filter) > -1) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }      
+    }
+}
+
+document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
+</script>
 </div>
 <!--............................FOOTER GOES HERE....................................................................-->
 <div w3-include-html="/footer.html"></div>
