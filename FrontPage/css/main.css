@@ -73,6 +73,9 @@ body { font-family: sans-serif; }
     .navbar-brand img {
         height: 48px;
     }
+    .navbar-brand{
+        width: 100%;
+    }
     .navbar-link {
         font-weight: bold;
     }
