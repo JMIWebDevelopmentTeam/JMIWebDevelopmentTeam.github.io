@@ -24,7 +24,7 @@ a[data-toggle="collapse"] {
     position: relative;
 }
 
-a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+/*a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
     content: '\e259';
     display: block;
     position: absolute;
@@ -35,7 +35,7 @@ a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
 
 a[aria-expanded="true"]::before {
     content: '\e260';
-}
+}*/
 
 @media (max-width: 768px) {
     #sidebar {
@@ -88,6 +88,7 @@ a, a:hover, a:focus {
     padding: 10px;
     font-size: 1.1em;
     display: block;
+	color:#ffffff;
 }
 #sidebar ul li a:hover {
     color: #7386D5;
