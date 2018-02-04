@@ -38,8 +38,7 @@ a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
 a[aria-expanded="true"]::before {
     content: '\e260';
 }
-
-
+*/
 
 @media (max-width: 768px) {
     #sidebar {
@@ -50,7 +49,7 @@ a[aria-expanded="true"]::before {
     }
 }
 
-/*body {
+body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
 }
@@ -101,9 +100,9 @@ a, a:hover, a:focus {
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
     background: #6d7fcc;
-}*/
-/*ul ul a {
+}
+ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: #6d7fcc;
-}*/
+}
