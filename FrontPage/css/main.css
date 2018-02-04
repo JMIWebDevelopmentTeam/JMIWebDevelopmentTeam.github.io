@@ -1,171 +1,169 @@
 
+@import url('https://fonts.googleapis.com/css?family=Lato');
+/*
+	font-family: 'Lato', sans-serif;
+*/
 
-#wrapper {
-    padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+/*
+	colors
+*/
+.has-text-navy {
+    color: #1976d2;
+}
+.has-text-purple {
+    color: #673AB7;
 }
 
-#wrapper.toggled {
-    padding-left: 250px;
+/*
+	backgrounds
+*/
+.has-bg-navy {
+    background-color: #1976d2;
+}
+.has-bg-navy * {
+    color: white;
 }
 
-#sidebar-wrapper {
-    position: fixed;
-    left: 250px;
-    z-index: 1000;
-    overflow-y: auto;
-    margin-left: -250px;
-    width: 0;
-    height: 100%;
-    background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+.has-bg-image {
+    background-image: url("../front-images/jmi_infra.jpg");
+    min-height: 500px;
 }
-
-#wrapper.toggled #sidebar-wrapper {
-    width: 250px;
-}
-
-#page-content-wrapper {
-    padding: 15px;
-    width: 100%;
-}
-
-#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -250px;
-}
-
-/* Sidebar Styles */
-
-.sidebar-nav {
-    position: absolute;
-    top: 0;
-    margin: 0;
-    padding: 0;
-    width: 250px;
-    list-style: none;
-}
-
-.sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
-}
-
-.sidebar-nav li a {
-    display: block;
-    margin-bottom: 1em;
-    color: #999999;
-    text-decoration: none;
-}
-
-.sidebar-nav li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    text-decoration: none;
+.has-bg-purple * {
+    color: white;
 }
 
 
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-    text-decoration: none;
+
+* {
+    font-family: 'Lato', sans-serif;
 }
 
-.sidebar-nav > .sidebar-brand {
-    height: 65px;
-    font-size: 18px;
-    line-height: 60px;
+nav {
+    padding: 1em;
 }
 
-.sidebar-nav > .sidebar-brand a {
-    color: #999999;
+.navbar-burger {
+    border: none;
 }
 
-.sidebar-nav > .sidebar-brand a:hover {
-    background: none;
-    color: #fff;
+.navbar-brand img{
+    height: 56px;
+    vertical-align: middle;
 }
 
-@media (min-width: 768px) {
-    #wrapper {
-        padding-left: 250px;
+.navbar-item, .navbar-link {
+
+    border-radius: 5px;
+}
+body { font-family: sans-serif; }
+
+.footer {
+    margin-top: 3em;
+}
+.navbar-dropdown{
+    font-size:1em;
+}
+/*
+	Small screens
+*/
+@media screen and (max-width: 767px) {
+    nav {
+        padding: 5px;
     }
-
-    #wrapper.toggled {
-        padding-left: 0;
+    .navbar-brand img {
+        height: 48px;
     }
-
-    #sidebar-wrapper {
-        width: 250px;
+    .navbar-link {
+        font-weight: bold;
     }
+    .navbar-item {
+        font-weight: 100;
 
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0;
     }
-
-    #page-content-wrapper {
-        padding: 20px;
+    .portrait img{
+        height: 128px !important;
+        width: 128px !important;
     }
-
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
+    blockquote:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 5em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+    }
+    blockquote:after {
+        color: #ccc;
+        content: close-quote;
+        font-size: 5em;
+        line-height: 0.1em;
+        margin-left: 0.25em;
+        vertical-align: -0.7em;
+    }
+    blockquote p {
+        font-size: 1em;
+    }
+    .paragraph {
+        padding: 1em;
     }
 }
 
-.carousel {
-    height: 500px;
-    margin-bottom: 60px;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-    z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-    height: 500px;
-
-    background-color: #777;
-}
-.carousel-inner > .item > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 500px;
-}
-#research{
-    height: 100%;
-}
-.borderCol{
-    border: 2px solid #ebebe0;
-    border-radius:5px;
-    padding: 8px;
-    background-color: #ffffff;
-}
-.borderCol:hover{
-    border-top: 5px solid #00ffff;
+@media screen and (min-width: 768px) {
+    blockquote:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 8em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+    }
+    blockquote:after {
+        color: #ccc;
+        content: close-quote;
+        font-size: 8em;
+        line-height: 0.1em;
+        margin-left: 0.25em;
+        vertical-align: -0.6em;
+    }
+    blockquote p {
+        font-size: 2em;
+    }
+    blockquote {
+        margin-top: 5em !important;
+    }
+    .tile article{
+        transition: transform 0.15s ease-out;
+    }
+    .tile article:hover {
+        transform: scale(1.05);
+    }
 }
 
-p.subtitile {
-    color: #000;
-    margin: 0 0 3.5em;
-    font-size: 1em;
+blockquote {
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
 }
 
-#second-block {
-    background: #E53935;
+blockquote p {
+    display: inline;
+    color: #6b6b6b
 }
-.news-item{
-    margin-left: 1em;
-    margin-right: 1em;
+
+.circle {
+    border-radius: 100%;
 }
+
+.section-title {
+    border-left: solid 7.5px rgba(255, 255, 255, 0.5);
+    padding: 0.5em 0.5em;
+    margin-bottom: 5em;
+}
+.section {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
 
 .parallax {
     /* The image used */
@@ -179,25 +177,6 @@ p.subtitile {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-#rotated li{
-    padding:0.5em;
-}
-.img-circle{
-    max-height: 100px;
-}
-#jmilogo{
-    height:50px;
-    width:50px;
-    vertical-align: middle;
-    margin-bottom:6px;
-    margin-right: 2px;
-    margin-left: 0px;
-}
-@media (max-width: 600px) {
-    #titleJMI{
-        font-size: 0;
-    }
 }
 /*FOOTER CODE*/
 

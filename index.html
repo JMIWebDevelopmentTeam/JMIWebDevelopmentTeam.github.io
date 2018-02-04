@@ -1,433 +1,401 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Department of Computer Engineering,JMI</title>
-    <link rel="stylesheet" href="FrontPage/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="FrontPage/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="FrontPage/owl-carousel/owl.theme.css">
+
+    <script src="https://unpkg.com/flickity@2.0.10/dist/flickity.pkgd.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="FrontPage/js/frontPage.js"></script>
+
+    <link rel="stylesheet" href="FrontPage/css/main.css">
     <link rel="shortcut icon" href="favicon.ico" />
 </head>
 <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="font-size: 1.1em;">
 
+            <div class="navbar-brand" style="margin: 0;padding: 0;">
+                <a>
+                    <img src="FrontPage/front-images/jmilogo.jpg">
 
+                </a>
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></a>
-            <a id="titleJMI" href="/index.html" style="float: left;">
-            <img style="float:left;" class="img-responsive img-circle" src="FrontPage/front-images/jmilogo.jpg" id="jmilogo" >
-                <h5  style="position:relative;text-align: center;color: #757575">   <u><strong> DEPARTMENT OF COMPUTER ENGINEERING,JMI</strong></u></h5></a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login</a></li>
-            </ul>
-            <form class="navbar-form navbar-right" action="#" method="GET">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search..." id="query" name="search" value="">
-                    <div class="input-group-btn">
-                        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
-                    </div>
+                <span class="button navbar-burger" data-target="navbar-menu-top">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+
+            </div>
+
+            <div class="navbar-menu" id="navbar-menu-top">
+
+                <div class="navbar-start">
+                    <a class="navbar-item" href="">
+                        <strong>
+                            Department of Computer Engineering
+                        </strong>
+                    </a>
                 </div>
-            </form>
+
+                <div class="navbar-end">
+                    <a class="navbar-item is-active" href="#">
+                        Home
+                    </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            About Us
+                        </a>
+                        <div class="navbar-dropdown is-boxed">
+                            <a class="navbar-item" href="../about/messagefromhod.html">
+                                Message from HOD
+                            </a>
+                            <a class="navbar-item">
+                                Vision and Mission
+                            </a>
+                            <a class="navbar-item">
+                                Facilities
+                            </a>
+                            <a class="navbar-item">
+                                Contact
+                            </a>
+                            <a class="navbar-item">
+                                Visiting Info
+                            </a>
+                            <a class="navbar-item">
+                                About Jamia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Academics
+                        </a>
+                        <div class="navbar-dropdown is-boxed">
+                            <a class="navbar-item">
+                                B.Tech
+                            </a>
+                            <a class="navbar-item">
+                                M.Tech
+                            </a>
+                            <a class="navbar-item">
+                                B.E.
+                            </a>
+                            <a class="navbar-item">
+                                Ph.D.
+                            </a>
+                            <a class="navbar-item">
+                                Courses
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            People
+                        </a>
+                        <div class="navbar-dropdown is-boxed">
+                            <a class="navbar-item">
+                                Faculty
+                            </a>
+                            <a class="navbar-item">
+                                Research Scholars
+                            </a>
+                            <a class="navbar-item">
+                                Students
+                            </a>
+                            <a class="navbar-item">
+                                Students
+                            </a>
+                            <a class="navbar-item">
+                                Staff
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Research
+                        </a>
+                        <div class="navbar-dropdown is-boxed">
+                            <a class="navbar-item">
+                                Areas
+                            </a>
+                            <a class="navbar-item">
+                                Projects
+                            </a>
+                            <a class="navbar-item">
+                                Publications
+                            </a>
+                        </div>
+                    </div>
+                    <a class="navbar-item">
+                        Events
+                    </a>
+                </div>
+
+            </div>
+
+
+    </nav>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-bottom: 1em;">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item">
+            <img class="first-slide" src="FrontPage/slider/slide1.jpg" alt="First slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Example headline.</h1>
+                    <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item active left">
+            <img class="second-slide" src="FrontPage/slider/slide2.jpg" alt="Second slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Another example headline.</h1>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item next left">
+            <img class="third-slide" src="FrontPage/slider/slide3.jpg" alt="Third slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>One more for good measure.</h1>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 
-<div id="wrapper" class="toggled">
-    <div class="container-fluid">
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <br>
-                </li>
+<section class="has-bg-navy section">
+    <div class="container">
+        <a class="section-title title">
+            News &amp; Events
+        </a>
+        <br><br><br>
+        <div class="tile is-ancestor">
+            <div class="tile is-vertical is-8">
+                <div class="tile">
+                    <div class="tile is-parent is-vertical">
+                        <article class="tile is-child notification is-primary">
 
-                <li>
-                    <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
-                </li>
-                <li>
-                    <a href="#aboutUsSubmenu" data-toggle="collapse" aria-expanded="false"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> About Us
 
-                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-                    </a>
-                    <ul class="collapse" id="aboutUsSubmenu">
-                        <li><a href="aboutus/about.html"> About Jamia</a></li>
-                        <li><a href="aboutus/msgfromhod.html"> Message for HOD</a></li>
-                        <li><a href="aboutus/facilities.html"> Facilities</a></li>
-                        <li><a href="aboutus/mav.html"> Vision And Mision</a></li>
-                        <li><a href="aboutus/howtoreachus.html"> Visiting Info</a></li>
-                    </ul>
 
-                </li>
-                <li>
-                    <a href="#academicsSubmenu" data-toggle="collapse" aria-expanded="false"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Academics
+                            <p class="title" style="text-align: center;">15th National Conference of Engineering Council of <India></India></p>
 
-                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-                    </a>
-                    <ul class="collapse" id="academicsSubmenu">
-                        <li><a href="academics/btech_program.html"> B.Tech</a></li>
-                        <li><a href="academics/mtech_program.html"> M.Tech</a></li>
-                        <li><a href="academics/be_program.html"> B.E.</a></li>
-                        <li><a href="academics/phd_program.html"> PhD</a></li>
-                        <li><a href="academics/academics_courses.html"> Courses</a></li>
-                    </ul>
+                            <a href="events/eci_conference.html">
+                                <img class="img-responsive" src="FrontPage/front-images/events/eci.jpeg" alt="Image">
 
-                </li>
-                <li>
-                    <a href="#peopleSubmenu" data-toggle="collapse" aria-expanded="false"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> People
+                            </a>
 
-                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-                    </a>
-                    <ul class="collapse" id="peopleSubmenu">
-                        <li><a href="#"> Faculty</a></li>
-                        <li><a href="#"> Reseach Scholars</a></li>
-                        <li><a href="#"> Students</a></li>
-                        <li><a href="#"> Staff</a></li>
-                    </ul>
 
-                </li>
-                <li>
-                    <a href="#researchSubmenu" data-toggle="collapse" aria-expanded="false"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> People
+                        </article>
+                        <article class="tile is-child notification is-warning">
 
-                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-                    </a>
-                    <ul class="collapse" id="researchSubmenu">
-                        <li><a href="#"> Areas</a></li>
-                        <li><a href="#"> Projects</a></li>
-                        <li><a href="#"> Publications</a></li>
-                    </ul>
+                            <p class="title" style="text-align: center;">4th HPCAC-ISC Student Cluster Competition 2015
+                            </p>
+                            <a href="events/hpcac.html">
+                                <img class="img-responsive" src="FrontPage/front-images/events/hpcac1.png" alt="Image">
 
-                </li>
-                <li>
-                    <a href="#"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Events</a>
-                </li>
-            </ul>
+                            </a>
+
+
+                        </article>
+                    </div>
+                    <div class="tile is-parent is-vertical">
+                        <article class="tile is-child notification is-info">
+
+                                <p class="title" style="text-align: center;">Smart India Hackathon Excellent Performance by students</p>
+
+                                <div class="content">
+                                    <a href="events/smartindiahackathon.html">
+                                        <img class="img-responsive" src="FrontPage/front-images/events/smartindia1.png" alt="Image">
+
+                                    </a>
+                                </div>
+
+                        </article>
+                        <article class="tile is-child notification is-danger" style="float: bottom;">
+
+                            <p class="title" style="text-align: center;">Web and Game development Using Ruby on Rails and Django</p>
+
+                            <div class="content">
+                                <a href="events/webgameevent.html">
+                                    <img class="img-responsive" src="FrontPage/front-images/events/webd.png" alt="Image">
+
+                                </a>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+                <p style="text-align: right;margin-right: 20px;"><a class="btn btn-default" style="background-color: #FFCDD2;" href="events/events.html" role="button">Know More »</a></p>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child notification is-success">
+                    <div class="content">
+                        <p class="title" style="text-align: center;"><u>Recent Publications</u></p>
+
+                        <div class="content">
+                            <!-- Content -->
+                            <marquee direction="up">
+                                <ul >
+                                    <li><a>Publiction 1</a></li>
+                                    <li><a>Publiction  2</a></li>
+                                    <li><a>Publiction  3</a></li>
+                                    <li><a>Publiction  4</a></li>
+                                    <li><a>Publiction  5</a></li>
+                                    <li><a>Publiction  6</a></li>
+                                    <li><a>Publiction  7</a></li>
+                                    <li><a>Publiction  8</a></li>
+                                    <li><a>Publiction  8</a></li>
+                                    <li><a>Publiction  8</a></li>
+                                    <li><a>Publiction  8</a></li>
+                                    <li><a>Publiction  8</a></li>
+                                    <li><a>Publiction  8</a></li>
+                                    <li><a>Publiction  8</a></li>
+                                    <li><a>Publiction  8</a></li>
+                                    <li><a>Publiction  8</a></li>
+                                    <li><a>Publiction  8</a></li>
+                                    <li><a>Publiction  8</a></li>
+                                    <li><a>Publiction  8</a></li>
+                                    <li><a>Publiction  8</a></li>
+
+                                </ul>
+
+                            </marquee>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+
         </div>
-        <!-- /#sidebar-wrapper -->
+    </div>
+</section>
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid" style="width: 100%;margin: 0;padding: 0;">
+<section class="section has-bg-image">
+    <div class="container" style="padding: 1em;">
+<div class="row"  style="background-color: rgba(0,0,0,0.4); color: #FFFFFF">
+        <h1 class="title section-title">
+            A Heading
+        </h1>
+        <p class="is-size-5 paragraph">
 
-                <div class="row"  style="width: 100%;margin: 0;padding: 0;">
-                    <div class="col-lg-12">
+            Haxx0r ipsum wombat ack server irc nak packet sniffer stack char port cat big-endian gnu it's a feature buffer. Infinite loop win ip rm -rf less baz frack machine code James T. Kirk bang snarf worm loop flush mainframe class. Dennis Ritchie stack trace fail function fatal January 1, 1970 pwned ascii pragma perl ssh echo /dev/null.
 
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-bottom: 1em;">
-                            <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-                                <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-                                <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
-                            </ol>
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item">
-                                    <img class="first-slide" src="FrontPage/slider/slide1.jpg" alt="First slide">
-                                    <div class="container">
-                                        <div class="carousel-caption">
-                                            <h1>Example headline.</h1>
-                                            <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-                                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item active left">
-                                    <img class="second-slide" src="FrontPage/slider/slide2.jpg" alt="Second slide">
-                                    <div class="container">
-                                        <div class="carousel-caption">
-                                            <h1>Another example headline.</h1>
-                                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item next left">
-                                    <img class="third-slide" src="FrontPage/slider/slide3.jpg" alt="Third slide">
-                                    <div class="container">
-                                        <div class="carousel-caption">
-                                            <h1>One more for good measure.</h1>
-                                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
+            Null recursively if concurrently snarf echo class function new cat win socket memory leak ddos mutex tunnel in mainframe char Donald Knuth. Race condition while hash epoch perl bubble sort bytes var firewall. Machine code bin I'm sorry Dave, I'm afraid I can't do that root system race condition todo double frack ban Dennis Ritchie cookie hexadecimal sql malloc.
 
+            Wannabee suitably small values concurrently printf stack trace. Cache cache xss /dev/null dereference unix Linus Torvalds Dennis Ritchie January 1, 1970. Private emacs ip headers crack root sql do worm true hello world socket James T. Kirk int salt frack over clock I'm sorry Dave, I'm afraid I can't do that.
 
-                        <div id="second-block" style="padding: 1.5em;margin: 1em;">
+            Wombat machine code foo win ssh L0phtCrack Trojan horse frack spoof hexadecimal. Irc python it's a feature vi true echo rsa client. Rm -rf bit private lib mainframe crack finally while strlen shell ctl-c Starcraft.
 
-                            <div style="background-color:rgba(0,0,0,0.2); padding: 1em 1em; border-radius: 8px;" class="line">
-                                <h2  style="margin: 0.5em;color: #ffffff;text-align: center;"><strong>Events And News</strong></h2>
+            January 1, 1970 ssh d00dz break recursively L0phtCrack throw crack loop grep true float. Bypass xss memory leak tarball bin finally hash perl it's a feature root overflow Leslie Lamport Starcraft try catch ack bypass highjack. Printf var endif segfault suitably small values frack cd pragma eaten by a grue port cat rsa linux headers fatal boolean Linus Torvalds.
+        </p>
+</div>
+    </div>
+</section>
 
-                                <div class="margin">
-                                    <div id="owl-demo" class="owl-carousel owl-theme">
-                                        <div class=" news-item">
-                                            <a href="events/eci_conference.html">
-                                                <img class="img-responsive" src="FrontPage/front-images/events/eci.jpeg" alt="Image">
-                                                <p class="subtitile">15th National Conference of Engineering Council of India
-                                                </p>
-                                            </a>
-                                        </div>
-                                        <div class="news-item">
-                                            <a href="events/hpcac.html">
-                                                <img class="img-responsive" src="FrontPage/front-images/events/hpcac1.png" alt="Image">
-                                                <p class="subtitile">4th HPCAC-ISC Student Cluster Competition 2015
-                                                </p>
-                                            </a>
-                                        </div>
-                                        <div class="news-item">
-                                            <a href="events/securingcloudevent.html">
-                                                <img class="img-responsive" src="FrontPage/front-images/events/iot.png" alt="Image">
-                                                <p class="subtitile">Securing Cloud-Assisted Services and IoT Systems
-                                                </p>
-                                            </a>
-                                        </div>
-                                        <div class="news-item">
-                                            <a href="events/smartindiahackathon.html">
-                                                <img class="img-responsive" src="FrontPage/front-images/events/smartindia1.png" alt="Image">
-                                                <p class="subtitile">Smart India Hackathon Excellent Performance by students
-                                                </p>
-                                            </a>
-                                        </div>
-                                        <div class="news-item">
-                                            <a href="events/webgameevent.html">
-                                                <img class="img-responsive" src="FrontPage/front-images/events/webd.png" alt="alternative text">
-                                                <p class="subtitile">Web and Game development Using Ruby on Rails and Django
-                                                </p>
-                                            </a>
-                                        </div>
+<div id='faculty' class="parallax">
 
-                                    </div>
-                                    <p style="text-align: right;"><a class="btn btn-default" style="background-color: #FFCDD2;" href="events/events.html" role="button">Know More »</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="row" id="recent-publicatons">
-
-
-                            <h2 class="headingh2" style="text-align: center;"><span class="well well-sm"><b>Recent Publications</b></span></h2><br>
-                            <ul id="rotated">
-                                <li><a>Publiction 1</a></li>
-                                <li><a>Publiction  2</a></li>
-                                <li><a>Publiction  3</a></li>
-                                <li><a>Publiction  4</a></li>
-                                <li><a>Publiction  5</a></li>
-                                <li><a>Publiction  6</a></li>
-                                <li><a>Publiction  7</a></li>
-                                <li><a>Publiction  8</a></li>
-                            </ul>
-                            <p style="text-align: right;margin: 10px;"><a class="btn btn-primary" href="publications.html" role="button">More Publications »</a></p>
-
-
-                        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <div id='faculty' class="parallax">
-
-                        <p style="color:#FFFFFF;position:relative;top:40%;text-align: center;font-size: 2em;">
+    <p style="color:#FFFFFF;position:relative;top:40%;text-align: center;font-size: 2em;">
                             <span style="background: rgba(0,0,0,0.5);padding: 10px;">
                             Know our highly qualified and experienced faculty<br/>
 
 
                             </span>
-                            <button type="button" class="btn btn-light" style="margin: 10px; background:#000000 "><a href="people/teachers/teachers.html">Read More..</a></button>
-                        </p>
+        <button type="button" class="btn btn-light" style="margin: 10px; background:#000000 "><a href="people/teachers/teachers.html">Read More..</a></button>
+    </p>
 
 
 
 
-                        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <div id="research">
-                            <div  class="row">
-                                <h2 class="headingh2" style="text-align: center;"><span class="well well-sm"><b>Research</b></span></h2><br>
-                                <div class="col-md-4">
-                                    <div class="borderCol">
-                                        <h2 style="text-align: center;">Area 1</h2>
-                                        <img class="img-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 100%;padding: 10px;" height="140">
-                                        <h3>Research Title 1</h3>
-                                        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-
-                                        <p style="text-align: right;"><a class="btn btn-default" href="#" role="button">Know More »</a></p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="borderCol">
-                                        <h2 style="text-align: center;">Area 2</h2>
-                                        <img class="img-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 100%;padding: 10px;"height="140">
-                                        <h3>Research Title 2</h3>
-                                        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                                        <div class="moveright">
-                                            <p style="text-align: right;"><a class="btn btn-default" href="#" role="button">Know More »</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="borderCol">
-                                        <h2 style="text-align: center;">Area 3</h2>
-                                        <img class="img-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 100%;padding: 10px;"  height="140">
-
-                                        <h3>Research Title 3</h3>
-                                        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                                        <div class="moveright">
-                                            <p style="text-align: right;"><a class="btn btn-default" href="#" role="button">Know More »</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col pull-right">
-                                    <p><a class="btn outline" href="research/finalyearprojects.html" role="button">More Research »</a></p>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-
-                        <!--............................RESEARCH AND PUBLICATIONS ENDS HERE.........................-->
-
-                        <div class="row" style="padding:2em;background-color: #3F51B5;color: #FFFFFF">
-                            <div class="line" style="padding:2em;background-color:rgba(0,0,0,0.4);">
-                                <h2>Listen from our Alumini</h2>
-                                <div id="owl-demo2" class="owl-carousel owl-theme">
-                                    <div class="item ">
-                                        <div class="s-3 m-3 l-2 image-cropper">
-                                            <img src="FrontPage/front-images/testimonials/1-s.jpg" class="img-circle img-responsive" />
-                                        </div>
-                                        <h3 style="color:#fff;">A.David</h3>
-                                        <p class="s-12 m-9 l-10">
-                                            Hii my name is A.David, I am from south India. Jamia Millia Islamia is the best college ever. it helped to achieve greater heights allowed me to explore my interest and pursue it as my future.
-                                        </p>
-                                    </div>
-                                    <div class="item ">
-                                        <div class="s-3 m-3 l-2 image-cropper">
-                                            <img src="FrontPage/front-images/testimonials/2-s.jpg" class="img-circle img-responsive" />
-                                        </div>
-                                        <h3 style="color:#fff;">Nayantara</h3>
-                                        <p class="s-12 m-9 l-10">
-                                            Hii my name is A.David, I am from south India. Jamia Millia Islamia is the best college ever. it helped to achieve greater heights allowed me to explore my interest and pursue it as my future.  </p>
-                                    </div>
-                                    <div class="item ">
-                                        <div class="s-3 m-3 l-2 image-cropper">
-                                            <img src="FrontPage/front-images/testimonials/3-s.jpg" class="img-circle img-responsive" />
-                                        </div>
-                                        <h3 style="color:#fff;">Namanpreet</h3>
-                                        <p class="s-12 m-9 l-10">
-                                            Hii my name is A.David, I am from south India. Jamia Millia Islamia is the best college ever. it helped to achieve greater heights allowed me to explore my interest and pursue it as my future. </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
+    <div class="row" style="width:100%;margin: 0;padding:20px;background-color: #3F51B5;color: #FFFFFF;">
+        <div class="line" style="width:100%;padding:2em;background-color:rgba(0,0,0,0.4);">
+            <h2>Listen from our Alumini</h2><br>
+            <div id="owl-demo2" class="owl-carousel owl-theme">
+                <div class="item" style="width: 100%;">
+                    <div class="row">
+                    <div class="col-sm-2 image-cropper">
+                        <img src="FrontPage/front-images/testimonials/1-s.jpg" class="img-circle img-responsive" />
                     </div>
+                        <div class="col-sm-10">
 
-
-
-
+                    <p >
+                    <h3 style="color:#fff;">A.David</h3>
+                        Hii my name is A.David, I am from south India. Jamia Millia Islamia is the best college ever. it helped to achieve greater heights allowed me to explore my interest and pursue it as my future.
+                    </p>
+                        </div>
+                    </div>
                 </div>
+                <div class="item" style="width: 100%;">
+                    <div class="row">
+                        <div class="col-sm-2 image-cropper">
+                            <img src="FrontPage/front-images/testimonials/1-s.jpg" class="img-circle img-responsive" />
+                        </div>
+                        <div class="col-sm-10">
+
+                            <p >
+                            <h3 style="color:#fff;">A.David</h3>
+                            Hii my name is A.David, I am from south India. Jamia Millia Islamia is the best college ever. it helped to achieve greater heights allowed me to explore my interest and pursue it as my future.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" style="width: 100%;">
+                    <div class="row">
+                        <div class="col-sm-2 image-cropper">
+                            <img src="FrontPage/front-images/testimonials/1-s.jpg" class="img-circle img-responsive" />
+                        </div>
+                        <div class="col-sm-10">
+
+                            <p >
+                            <h3 style="color:#fff;">A.David</h3>
+                            Hii my name is A.David, I am from south India. Jamia Millia Islamia is the best college ever. it helped to achieve greater heights allowed me to explore my interest and pursue it as my future.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+
+
     </div>
-</div>
-<!-- /#wrapper -->
+
+
+
 
 <footer class="footer-distributed">
 
@@ -438,18 +406,13 @@
             <a href="#">Home</a>
             .
             <a href="#">Contact Us</a>
-
+            <span class="pull-right">&copy; 2017 DEPARTMENT OF COMPUTER ENGINEERING,JAMIA MILLIA ISLAMIA, NEW DELHI</span>
         </p>
 
-        <p>DEPARTMENT OF COMPUTER ENGINEERING,JAMIA MILLIA ISLAMIA, NEW DELHI<BR> &copy; 2017</p>
+
     </div>
 
 </footer>
-
-
-
-
-
 
 <script type="text/javascript" src="FrontPage/owl-carousel/owl.carousel.js"></script>
 <script type="text/javascript">
@@ -471,13 +434,7 @@
 
 </script>
 
-
-
-
-
-
-
-
-
+<script src="FrontPage/js/main.js"></script>
 </body>
+
 </html>
