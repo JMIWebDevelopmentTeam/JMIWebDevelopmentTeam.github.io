@@ -14,7 +14,7 @@
 <body style="margin-bottom: 0px;">
   
 <link rel="stylesheet" href="/assets/css/main.css" />
-
+<link rel="stylesheet" href="../assets/css/sidebar.css" />
 
 <!--======================================NAVBAR STARTS HERE=============================================-->
 <div w3-include-html="/header.html"></div>
@@ -22,11 +22,36 @@
 w3.includeHTML();
 </script>
 <!--======================================NAVBAR ENDS HERE=============================================-->
+<!--   Sidabar code ---->
+<div class="wrapper">
 
+    <nav id="sidebar">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <h3>Other Events</div>
 
-<div class="main-container">
+        <!-- Sidebar Links -->
+        <ul class="list-unstyled components">
+            <li><a href="../events/eci_conference.html">15th National Conference of Engineering Council of India</a></li>
+            <li><a href="../events/webgameevent.html">Web and Game development Using Ruby on Rails and Django</a></li>
+            <li><a href="../events/smartindiahackathon.html">Teams from Department Of Computer Enigineering, JMI endeavour remarkably in SMART INDIA HACKATHON, 2017</a></li>
+            <li><a href="../events/securingcloudevent.html">Securing Cloud-Assisted Services and IoT Systems</a></li>
+			 <li><a href="../events/hpcac.html">4th HPCAC-ISC STUDENT CLUSTER COMPETITION 2015</a></li>
+		</ul>
+    </nav>
+<!-- side bar code ends----->
 
-    <div class="container">
+    
+
+<div id="page-content-wrapper">
+<!-- sidebar button-->
+    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+        <i class="glyphicon glyphicon-align-left"></i>
+        Other Events
+    </button>
+	<!-- sidebar button ends-->
+    <div class="container-fluid" style="width: 100%;margin: 0;padding-left: 5%;padding-right: 5%;">
+
         <h2 style="color:#404040;width: auto;text-align:center;margin-top:0px;"class="well well-sm"><strong>4th HPCAC-ISC STUDENT CLUSTER COMPETITION 2015</strong></h2>
 <div class="row">
         <p class="well well-md"style="margin: 0px;">
@@ -81,6 +106,23 @@ Md Safiyat Reza.</span><br><br>
 <hr>
 </div>
 </div>
+</div>
 <div w3-include-html="/footer.html"></div>
+<!-- sidebar jquery-->
+        <!-- jQuery CDN -->
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+</script>
+<!-- sidebar jqury ends -->
 </body>
 </html>

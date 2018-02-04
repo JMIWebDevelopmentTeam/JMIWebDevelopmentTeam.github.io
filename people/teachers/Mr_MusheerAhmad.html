@@ -14,7 +14,7 @@
 <body style="margin-bottom: 0px; font-family: 'Helvetica';">
 
 <link rel="stylesheet" href="../../assets/css/main.css" />
-
+<link rel="stylesheet" href="../../assets/css/sidebar.css" />
 <style>
 
     .popup
@@ -44,9 +44,43 @@
     w3.includeHTML();
 </script>
 <!--======================================NAVBAR ENDS HERE=============================================-->
+<!--   Sidabar code ---->
+<div class="wrapper">
 
-<div class="main-conatiner">
-    <div class="container">
+    <nav id="sidebar">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <h3>Faculty List</div>
+
+        <!-- Sidebar Links -->
+        <ul class="list-unstyled components">
+            <li><a href="/people/teachers/Dr_Mohammad_Najmud_Doja.html">Dr. Mohd Najmud Doja</a></li>
+            <li><a href="/people/teachers/Dr_TanvirAhmad.html">Dr. Tanvir Ahmad</a></li>
+            <li><a href="/people/teachers/Dr_Bashir_Alam.html">Dr. Bashir Alam</a></li>
+            <li><a href="/people/teachers/Mr_Danish_Raza_Rizvi.html">Mr. Danish Raza Rizvi</a></li>
+			 <li><a href="/people/teachers/Mr_FaiyazAhmad.html">Mr. Faiyaz Ahmad</a></li>
+			  <li><a href="/people/teachers/Mr_JawaharLal.html">Mr. Jawahar Lal</a></li>
+			   <li><a href="/people/teachers/Dr_Mohammad_Amjad.html">Dr. Mohammad Amjad</a></li>
+			    <li><a href="/people/teachers/Mr_Mohammad_Zeeshan_Ansari.html">Mr. Mohd Zeeshan Ansari</a></li>
+				 <li><a href="/people/teachers/Mr_MusheerAhmad.html">Mr. Musheer Ahmad</a></li>
+				 <li><a href="/people/teachers/Mr_MumtazAhmed.html">Mr. Mumtaz Ahmad</a></li>
+				 <li><a href="/people/teachers/Mr_Sarfaraz_Masood.html">Mr. Sarfaraz Masood</a></li>
+			
+        </ul>
+    </nav>
+<!-- side bar code ends----->
+
+    
+
+<div id="page-content-wrapper">
+<!-- sidebar button-->
+    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+        <i class="glyphicon glyphicon-align-left"></i>
+        Other faculties
+    </button>
+	<!-- sidebar button ends-->
+    <div class="container-fluid" style="width: 100%;margin: 0;padding-left: 5%;padding-right: 5%;">
+
 
         <p class="well well-sm"  style="color:#404040;text-align: center;"><span style="font-size: 2em;"><strong>Mr. Musheer Ahmad</strong></span>
             <br><span style="font-size: 1.25em;"> <strong>(Assistant Professor)</strong></span>
@@ -156,8 +190,24 @@
 </div>
 
 
-
+</div>
 
 <div w3-include-html="/footer.html"></div>
+<!-- sidebar jquery-->
+        <!-- jQuery CDN -->
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+</script>
+<!-- sidebar jqury ends -->
 </body>
 </html>
