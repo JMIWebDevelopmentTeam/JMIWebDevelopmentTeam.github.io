@@ -22,11 +22,11 @@
 }
 
 
-a[data-toggle="collapse"] {
+/*a[data-toggle="collapse"] {
     position: relative;
 }
 
-/*a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
     content: '\e259';
     display: block;
     position: absolute;
@@ -50,7 +50,7 @@ a[aria-expanded="true"]::before {
     }
 }
 
-body {
+/*body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
 }
@@ -68,7 +68,7 @@ a, a:hover, a:focus {
     text-decoration: none;
     transition: all 0.3s;
 }
-
+*/
 #sidebar {
     /* don't forget to add all the previously mentioned styles here too */
     background: #000000;
@@ -105,8 +105,8 @@ a, a:hover, a:focus {
     color: #fff;
     background: #6d7fcc;
 }
-ul ul a {
+/*ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: #6d7fcc;
-}
+}*/
