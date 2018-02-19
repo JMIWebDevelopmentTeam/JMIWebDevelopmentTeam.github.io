@@ -98,10 +98,10 @@ a, a:hover, a:focus {
 	color:#ffffff;
 }
 #sidebar ul li a:hover {
-    color: #7386D5;
+    color: #000000;
     background: #fff;
 }
-
+/*
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
     background: #6d7fcc;
@@ -110,4 +110,4 @@ ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: #6d7fcc;
-}
+}*/
