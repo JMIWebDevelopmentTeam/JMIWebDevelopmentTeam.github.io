@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,13 +25,11 @@ body {margin:0;font-family:Arial}
 	-webkit-animation: fadeEffect 1s;
     animation: fadeEffect 1s;
 }
-
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
 }
-
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
@@ -40,7 +39,6 @@ body {margin:0;font-family:Arial}
   overflow: hidden;
   background-color: #333;
 }
-
 .topnav a {
   float: left;
   display: block;
@@ -50,22 +48,18 @@ body {margin:0;font-family:Arial}
   text-decoration: none;
   font-size: 17px;
 }
-
 .active {
   background-color: #4CAF50;
   color: white;
 }
-
 .topnav .icon {
   display: none;
 }
-
-.dropdown {
+.dropdown1{
     float: left;
     overflow: hidden;
 }
-
-.dropdown .dropbtn {
+.dropdown1 .dropbtn {
     font-size: 17px;    
     border: none;
     outline: none;
@@ -75,7 +69,6 @@ body {margin:0;font-family:Arial}
     font-family: inherit;
     margin: 0;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -84,7 +77,6 @@ body {margin:0;font-family:Arial}
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-
 .dropdown-content button {
     float: none;
     color: black;
@@ -92,21 +84,17 @@ body {margin:0;font-family:Arial}
     display: block;
     text-align: left;
 }
-
-.topnav a:hover, .dropdown:hover .dropbtn {
+.topnav a:hover, .dropdown1:hover .dropbtn {
   background-color: #555;
   color: white;
 }
-
 .dropdown-content a:hover {
     background-color: #ddd;
     color: black;
 }
-
-.dropdown:hover .dropdown-content {
+.dropdown1:hover .dropdown-content {
     display: block;
 }
-
 @media screen and (max-width: 300px) {
   .topnav a:not(:last-child), .dropdown .dropbtn {
     display: none;
@@ -116,7 +104,6 @@ body {margin:0;font-family:Arial}
     display: block;
   }
 }
-
 @media screen and (max-width: 300px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
@@ -129,9 +116,9 @@ body {margin:0;font-family:Arial}
     display: block;
     text-align: left;
   }
-  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown1 {float: none;}
   .topnav.responsive .dropdown-content {position: relative;}
-  .topnav.responsive .dropdown .dropbtn {
+  .topnav.responsive .dropdown1 .dropbtn {
     display: block;
     width: 100%;
     text-align: left;
@@ -163,7 +150,7 @@ w3.includeHTML();
 	<h2 style="text-align: center;"><strong>Students</strong></h2></div>
 <div class="topnav" id="myTopnav">
   
-  <div class="dropdown">
+  <div class="dropdown1">
     <button class="dropbtn">B.Tech.
       <i class="fa fa-caret-down"></i>
     </button>
@@ -175,7 +162,7 @@ w3.includeHTML();
       <button class="dropbtn" onclick="openCity(event, 'bt4')">BTech 4th year (2014-2018) </button>
     </div>
   </div> 
-  <div class="dropdown">
+  <div class="dropdown1">
     <button class="dropbtn">B.E. 
       <i class="fa fa-caret-down"></i>
     </button>
@@ -190,7 +177,7 @@ w3.includeHTML();
     <button class="dropbtn" onclick="openCity(event, 'be4')">BE 4th year (2014-2018)</button>
     </div>
   </div> 
-  <div class="dropdown">
+  <div class="dropdown1">
     <button class="dropbtn">M.Tech
       <i class="fa fa-caret-down"></i>
     </button>
@@ -3990,7 +3977,6 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
-
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
