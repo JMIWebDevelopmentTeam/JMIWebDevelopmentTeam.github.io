@@ -408,7 +408,7 @@
 
             </tr>
             <tr>
-                <td colspan="7"><strong>Semester 1</strong></td>
+                <td colspan="7"><strong>Semester 1</strong></td><td></td>
             </tr>
             <tr>
                 <td> AS 101</td> <td>Communication Skills</td> <td>	3</td> <td>0</td> <td>	0</td> <td>	3</td> <td>	3</td>
@@ -427,7 +427,7 @@
 
         </tr>
             <tr>
-                <td colspan="7"><strong>Semester 2</strong></td>
+                <td colspan="7"><strong>Semester 2</strong></td><td></td>
             </tr>
 
             <tr>
@@ -448,7 +448,7 @@
 
 
             <tr>
-                <td colspan="7"><strong>Semester 3</strong></td>
+                <td colspan="7"><strong>Semester 3</strong></td><td></td>
             </tr>
 
 
@@ -462,7 +462,7 @@
             <tr><td>CEN 393	</td><td>DLT Lab	</td><td>0	</td><td>0	</td><td>2	</td><td>2	</td><td>1</td></tr>
 
             <tr>
-                <td colspan="7"><strong>Semester 4</strong></td>
+                <td colspan="7"><strong>Semester 4</strong></td><td></td>
             </tr>
             <tr><td>CEN 401	</td><td>Mathematics-IV	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
             <tr><td>CEN 402	</td><td>Computer Organization	</td><td>2	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
@@ -473,7 +473,7 @@
             <tr><td>CEN 492	</td><td>Linux Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
             <tr><td>CEN 493	</td><td>Operating System Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
             <tr>
-                <td colspan="7"><strong>Semester 5</strong></td>
+                <td colspan="7"><strong>Semester 5</strong></td><td></td>
             </tr>
             <tr><td>CEN 501	</td><td>Computer Architecture	</td><td>2	</td><td>1	</td><td>0</td><td>	3</td><td>	3</td></tr>
             <tr><td>CEN 502	</td><td>Automata Theory	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
@@ -485,7 +485,7 @@
             <tr><td>CEN 593	</td><td>Computer Network Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
 
             <tr>
-                <td colspan="7"><strong>Semester 6</strong></td>
+                <td colspan="7"><strong>Semester 6</strong></td><td></td>
             </tr>
 
             <tr><td>CEN 601	</td><td>Analysis & Design of Algorithms	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
@@ -497,7 +497,7 @@
             <tr><td>CEN 692	</td><td>Compiler Design Lab	</td><td>0	</td><td>0	</td><td>2</td><td>	4</td><td>	2</td></tr>
             <tr><td>CEN 693	</td><td>Seminar	</td><td>0	</td><td>0	</td><td>1</td><td>	2</td><td>	1</td></tr>
             <tr>
-                <td colspan="7"><strong>Semester 7</strong></td>
+                <td colspan="7"><strong>Semester 7</strong></td><td></td>
             </tr>
             <tr><td>CEN 701</td><td>Data Mining</td><td>	3</td><td>	1	</td><td>0	</td><td>4</td><td>	4</td></tr>
             <tr><td>CEN 7xx	</td><td>Elective I	</td><td>3</td><td>	1</td><td>	0	</td><td>4	</td><td>4</td></tr>
@@ -505,7 +505,7 @@
             <tr><td>CEN 7xx	</td><td>Elective III</td><td>	3</td><td>	1	</td><td>0</td><td>	4</td><td>	4</td></tr>
 
             <tr>
-                <td colspan="7"><strong>Semester 8</strong></td>
+                <td colspan="7"><strong>Semester 8</strong></td><td></td>
             </tr>
 
 
@@ -542,6 +542,27 @@
 
 
         </table>
+		
+<script>
+    function filterTable(event) {
+    var filter = event.target.value.toUpperCase();
+    var rows = document.querySelector("#all-table tbody").rows;
+    for (var i = 0; i < rows.length; i++) {
+        var firstCol = rows[i].cells[0].textContent.toUpperCase();
+        var secondCol = rows[i].cells[1].textContent.toUpperCase();
+        if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1) {
+			rows[0].style.display = "";
+			rows[1].style.display = "";
+            rows[i].style.display = "";
+        } 
+		else {
+            rows[i].style.display = "none";
+        }
+    }
+}
+document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
+
+</script>
 
 </div>
 
@@ -565,7 +586,6 @@
         var x2 = document.getElementById("sem2-table");
         var x3 = document.getElementById("sem3-table");
         var x4= document.getElementById("sem4-table");
-
         var x5= document.getElementById("sem5-table");
         var x6= document.getElementById("sem6-table");
         var x7= document.getElementById("sem7-table");
@@ -580,13 +600,11 @@
         x8.style.display = "none";
         document.getElementById('all-content').style.display="none"
     });
-
     function sem1Function() {
         var x1 = document.getElementById("sem1-table");
         var x2 = document.getElementById("sem2-table");
         var x3 = document.getElementById("sem3-table");
         var x4= document.getElementById("sem4-table");
-
         var x5= document.getElementById("sem5-table");
         var x6= document.getElementById("sem6-table");
         var x7= document.getElementById("sem7-table");
@@ -603,14 +621,12 @@
         x6.style.display = "none";
         x7.style.display = "none";
         x8.style.display = "none";
-
     }
     function sem2Function() {
         var x1 = document.getElementById("sem1-table");
         var x2 = document.getElementById("sem2-table");
         var x3 = document.getElementById("sem3-table");
         var x4= document.getElementById("sem4-table");
-
         var x5= document.getElementById("sem5-table");
         var x6= document.getElementById("sem6-table");
         var x7= document.getElementById("sem7-table");
@@ -634,7 +650,6 @@
         var x2 = document.getElementById("sem2-table");
         var x3 = document.getElementById("sem3-table");
         var x4= document.getElementById("sem4-table");
-
         var x5= document.getElementById("sem5-table");
         var x6= document.getElementById("sem6-table");
         var x7= document.getElementById("sem7-table");
@@ -658,7 +673,6 @@
         var x2 = document.getElementById("sem2-table");
         var x3 = document.getElementById("sem3-table");
         var x4= document.getElementById("sem4-table");
-
         var x5= document.getElementById("sem5-table");
         var x6= document.getElementById("sem6-table");
         var x7= document.getElementById("sem7-table");
@@ -682,7 +696,6 @@
         var x2 = document.getElementById("sem2-table");
         var x3 = document.getElementById("sem3-table");
         var x4= document.getElementById("sem4-table");
-
         var x5= document.getElementById("sem5-table");
         var x6= document.getElementById("sem6-table");
         var x7= document.getElementById("sem7-table");
@@ -706,7 +719,6 @@
         var x2 = document.getElementById("sem2-table");
         var x3 = document.getElementById("sem3-table");
         var x4= document.getElementById("sem4-table");
-
         var x5= document.getElementById("sem5-table");
         var x6= document.getElementById("sem6-table");
         var x7= document.getElementById("sem7-table");
@@ -730,7 +742,6 @@
         var x2 = document.getElementById("sem2-table");
         var x3 = document.getElementById("sem3-table");
         var x4= document.getElementById("sem4-table");
-
         var x5= document.getElementById("sem5-table");
         var x6= document.getElementById("sem6-table");
         var x7= document.getElementById("sem7-table");
@@ -754,7 +765,6 @@
         var x2 = document.getElementById("sem2-table");
         var x3 = document.getElementById("sem3-table");
         var x4= document.getElementById("sem4-table");
-
         var x5= document.getElementById("sem5-table");
         var x6= document.getElementById("sem6-table");
         var x7= document.getElementById("sem7-table");
@@ -776,36 +786,19 @@
 </script>
 
 <script>
-    function filterTable(event) {
-    var filter = event.target.value.toUpperCase();
-    var rows = document.querySelector("#all-table tbody").rows;
-
-    for (var i = 0; i < rows.length; i++) {
-        var firstCol = rows[i].cells[0].textContent.toUpperCase();
-        var secondCol = rows[i].cells[1].textContent.toUpperCase();
-        if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1) {
-            rows[i].style.display = "";
-        } else {
-            rows[i].style.display = "none";
-        }
-    }
-
-}
     function changeAllContentSection(){
         var semwise=document.getElementById("sem-wise-content");
         var allatOnce=document.getElementById("all-content");
         allatOnce.style.display="block";
         semwise.style.display="none";
-
     }
     function changeSemSection() {
         var semwise=document.getElementById("sem-wise-content");
         var allatOnce=document.getElementById("all-content");
         allatOnce.style.display="none";
         semwise.style.display="block";
-
     }
-document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
+
 </script>
 
 <!--............................FOOTER GOES HERE....................................................................-->
