@@ -1,0 +1,813 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Department of Computer Engineering,JMI</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="shortcut icon" href="../favicon.ico" />
+</head>
+<body>
+
+<!--======================================NAVBAR STARTS HERE=============================================-->
+<div w3-include-html="/header.html"></div>
+
+
+<style>
+    table, th, td {
+        text-align: center;
+    }
+</style>
+<!--======================================NAVBAR ENDS HERE=============================================-->
+<div class="container">
+    <div class="row">
+        <h2 style="color:#404040;width: auto;margin:7px;width: 100%;text-align: center;"><span class="well well-lg"><strong>Course Structure</strong></span></h2>
+        <br>
+        <div class="dropdown" style="margin: 10px;float: right;">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Display Filter
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#" onclick="changeSemSection()">Semester Wise</a></li>
+                <li><a href="#" onclick="changeAllContentSection()">All at Once</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container" id="sem-wise-content">
+    <div class="row">
+        <a href="#sem1-table" onclick="sem1Function()">
+        <h3 class="well well-sm"><strong>Semester 1</strong>
+            <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
+        </h3>
+        </a>
+
+    </div>
+    <div class="row" id="sem1-table">
+
+        <table class="table" >
+
+            <colgroup span="2"></colgroup>
+            <colgroup span="2"></colgroup>
+            <tr class="header">
+                <th rowspan="2" colspan="1">Course Code </th>
+                <th rowspan="2" colspan="1">Course Title</th>
+                <th colspan="4" rowspan="1">Total Number of Contact Hours </th>
+                <th rowspan="2" colspan="1">Credits </th>
+            </tr>
+            <tr>
+
+                <td colspan="1">Lecture (L)</td>
+                <td>Tutorial (T)</td>
+                <td>Practical (P)</td>
+                <td>Total Hours</td>
+
+
+            </tr>
+            <tr>
+                <td> AS 101</td> <td>Communication Skills</td> <td>	3</td> <td>0</td> <td>	0</td> <td>	3</td> <td>	3</td>
+            </tr><tr><td> AS 151</td> <td>	Language Lab</td> <td>	0	</td> <td>0</td> <td>2</td> <td>	2	</td> <td>1</td> <td>
+        </tr><tr>   <td>AS 102</td> <td>	Engg. Physics – I</td> <td>	2	</td> <td>1	</td> <td>0</td> <td>	3</td> <td>	3</td> <td>
+        </tr><tr>    <td>AS 152</td> <td>	Engg. Physics  Lab –I</td> <td>	0	</td> <td>0</td> <td>	2	</td> <td>2	</td> <td>1</td> <td>
+        </tr><tr>   <td>AS 103</td> <td>	Engg. Chemistry	2</td> <td>	1</td> <td>	0	</td> <td>3</td> <td>	3</td> <td>
+        </tr><tr>   <td>AS 153</td> <td>	Engg. Chemistry Lab – I</td> <td>	0	</td> <td>0</td> <td>	2</td> <td>	2</td> <td>	1</td> <td>
+        </tr><tr>   <td>AS 104</td> <td>	Engg. Mathematics – I	</td> <td>3	</td> <td>1	</td> <td>0</td> <td>	5</td> <td>	4</td> <td>
+        </tr><tr>   <td>ME 101</td> <td>	Basics of Mech. Engg.	</td> <td>2	</td> <td>1	</td> <td>0</td> <td>	4</td> <td>	3</td> <td>
+        </tr><tr>   <td>CE 101</td> <td>	Basics of Civil & Environmental Engg.	</td> <td>2	</td> <td>1	</td> <td>0	</td> <td>4</td> <td>	3</td> <td>
+        </tr><tr>   <td>EE 101</td> <td>	Basics of Electrical Engineering	</td> <td>2	</td> <td>1	</td> <td>0</td> <td>	4</td> <td>	3</td> <td>
+        </tr><tr>   <td>ME 151</td> <td>	Workshop Practice	</td> <td>0	</td> <td>0	</td> <td>4	</td> <td>6	</td> <td>2</td> <td>
+
+
+
+            </tr>
+
+        </table>
+
+    </div>
+    <div class="row">
+        <a href="#sem2-table" onclick="sem2Function()">
+        <h3 class="well well-sm"><strong>Semester 2</strong>
+            <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
+        </h3>
+        </a>
+    </div>
+    <div class="row" id="sem2-table">
+
+        <table class="table" >
+
+            <colgroup span="2"></colgroup>
+            <colgroup span="2"></colgroup>
+            <tr class="header">
+                <th rowspan="2" colspan="1">Course Code </th>
+                <th rowspan="2" colspan="1">Course Title</th>
+                <th colspan="4" rowspan="1">Total Number of Contact Hours </th>
+                <th rowspan="2" colspan="1">Credits </th>
+            </tr>
+            <tr>
+
+                <td colspan="1">Lecture (L)</td>
+                <td>Tutorial (T)</td>
+                <td>Practical (P)</td>
+                <td>Total Hours</td>
+
+
+            </tr>
+            <tr>
+                <td>  AS 201	</td><td>Human Resource Management	</td><td>2	</td><td>1	</td><td>0	</td><td>3	</td><td>3</td>
+            </tr><tr><td>   AS 202</td><td>	Engg. Physics – II</td><td>	2	</td><td>1</td><td>	0	</td><td>3	</td><td>3</td>
+        </tr><tr><td>    AS 252</td><td>	Engg. Physics Lab – II	</td><td>0	</td><td>0	</td><td>2	</td><td>2</td><td>	1</td>
+        </tr><tr><td>   AS 203</td><td>	Engg. Chemistry –II	</td><td>2	</td><td>1	</td><td>0	</td><td>3</td><td>	3</td>
+        </tr><tr><td>   AS 253</td><td>	Engg. Chemistry Lab – II	</td><td>0	</td><td>0	</td><td>2	</td><td>2	</td><td>1</td>
+        </tr><tr><td>    AS 204</td><td>	Engg. Mathematics II</td><td>	3	</td><td>1</td><td>	0</td><td>	4</td><td>	4</td>
+        </tr><tr><td>   AS 205</td><td>	Innovative Sc. & Tech.</td><td>	2</td><td>	1</td><td>	0</td><td>	3</td><td>	3</td>
+        </tr><tr><td>        EC 101</td><td>	Basics of Electronics & Communication</td><td>	2</td><td>	1</td><td>	0</td><td>	3</td><td>	3</td>
+        </tr><tr><td>       CS 101</td><td>	Fundamentals of Computing</td><td>	2	</td><td>0	</td><td>0	</td><td>2	</td><td>3</td>
+        </tr><tr><td>     ME 250</td><td>	Engg. Graphics</td><td>	0</td><td>	0</td><td>	4	</td><td>4</td><td>	2</td>
+
+
+
+            </tr>
+
+        </table>
+
+    </div>
+    <div class="row">
+        <a href="#sem3-table" onclick="sem3Function()">
+        <h3 class="well well-sm"><strong>Semester 3</strong>
+            <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
+        </h3>
+        </a>
+
+    </div>
+    <div class="row" id="sem3-table">
+
+        <table class="table" >
+
+            <colgroup span="2"></colgroup>
+            <colgroup span="2"></colgroup>
+            <tr class="header">
+                <th rowspan="2" colspan="1">Course Code </th>
+                <th rowspan="2" colspan="1">Course Title</th>
+                <th colspan="4" rowspan="1">Total Number of Contact Hours </th>
+                <th rowspan="2" colspan="1">Credits </th>
+            </tr>
+            <tr>
+
+                <td colspan="1">Lecture (L)</td>
+                <td>Tutorial (T)</td>
+                <td>Practical (P)</td>
+                <td>Total Hours</td>
+
+
+            </tr>
+            <tr><td>CEN 301</td><td>Mathematics-III	</td><td>3	</td><td>1	</td><td>0	</td><td>4	</td><td>4</td></tr>
+            <tr><td>CEN 302	</td><td>Discrete Mathematics	</td><td>3	</td><td>1	</td><td>0	</td><td>4	</td><td>4</td></tr>
+            <tr><td>CEN 303	</td><td>Data Structure	</td><td>3	</td><td>1	</td><td>0	</td><td>4	</td><td>4</td></tr>
+            <tr><td>CEN 304	</td><td>Digital Logic Theory	</td><td>2	</td><td>1	</td><td>0	</td><td>4	</td><td>3</td></tr>
+            <tr><td>CEN 305	</td><td>Analog & Digital Communication	</td><td>2	</td><td>1	</td><td>0	</td><td>2	</td><td>3</td></tr>
+            <tr><td>CEN 391	</td><td>Data Structure Lab	</td><td>0	</td><td>0	</td><td>4	</td><td>4	</td><td>2</td></tr>
+            <tr><td>CEN 392	</td><td>C Programming Lab	</td><td>0	</td><td>0	</td><td>4	</td><td>4	</td><td>2</td></tr>
+            <tr><td>CEN 393	</td><td>DLT Lab	</td><td>0	</td><td>0	</td><td>2	</td><td>2	</td><td>1</td></tr>
+
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="row">
+        <a href="#sem4-table" onclick="sem4Function()">
+        <h3 class="well well-sm"><strong>Semester 4</strong>
+            <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
+        </h3>
+        </a>
+    </div>
+    <div class="row" id="sem4-table">
+
+        <table class="table" >
+
+            <colgroup span="2"></colgroup>
+            <colgroup span="2"></colgroup>
+            <tr class="header">
+                <th rowspan="2" colspan="1">Course Code </th>
+                <th rowspan="2" colspan="1">Course Title</th>
+                <th colspan="4" rowspan="1">Total Number of Contact Hours </th>
+                <th rowspan="2" colspan="1">Credits </th>
+            </tr>
+            <tr>
+
+                <td colspan="1">Lecture (L)</td>
+                <td>Tutorial (T)</td>
+                <td>Practical (P)</td>
+                <td>Total Hours</td>
+
+
+            </tr>
+
+            <tr><td>CEN 401	</td><td>Mathematics-IV	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 402	</td><td>Computer Organization	</td><td>2	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 403	</td><td>System Software	</td><td>2	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 404	</td><td>Operating System	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 405	</td><td>Database Management Systems	</td><td>3	</td><td>1	</td><td>0</td><td>	3</td><td>	3</td></tr>
+            <tr><td>CEN 491	</td><td>DBMS Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
+            <tr><td>CEN 492	</td><td>Linux Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
+            <tr><td>CEN 493	</td><td>Operating System Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
+
+        </table>
+
+    </div>
+    <div class="row">
+        <a href="#sem5-table" onclick="sem5Function()">
+        <h3 class="well well-sm"><strong>Semester 5</strong>
+            <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
+        </h3>
+        </a>
+
+    </div>
+    <div class="row" id="sem5-table">
+
+        <table class="table" >
+
+            <colgroup span="2"></colgroup>
+            <colgroup span="2"></colgroup>
+            <tr class="header">
+                <th rowspan="2" colspan="1">Course Code </th>
+                <th rowspan="2" colspan="1">Course Title</th>
+                <th colspan="4" rowspan="1">Total Number of Contact Hours </th>
+                <th rowspan="2" colspan="1">Credits </th>
+            </tr>
+            <tr>
+
+                <td colspan="1">Lecture (L)</td>
+                <td>Tutorial (T)</td>
+                <td>Practical (P)</td>
+                <td>Total Hours</td>
+
+
+            </tr>
+
+            <tr><td>CEN 501	</td><td>Computer Architecture	</td><td>2	</td><td>1	</td><td>0</td><td>	3</td><td>	3</td></tr>
+            <tr><td>CEN 502	</td><td>Automata Theory	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 503	</td><td>Microprocessor	</td><td>2	</td><td>1	</td><td>0</td><td>	3</td><td>	3</td></tr>
+            <tr><td>CEN 504	</td><td>Object Oriented Programming 	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 505	</td><td>Computer Networks	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 591</td><td>	OOPs Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
+            <tr><td>CEN 592	</td><td>Microprocessor Lab	</td><td>0	</td><td>0	</td><td>2</td><td>	2</td><td>	1</td></tr>
+            <tr><td>CEN 593	</td><td>Computer Network Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
+
+        </table>
+
+    </div>
+    <div class="row">
+        <a href="#sem6-table" onclick="sem6Function()">
+        <h3 class="well well-sm"><strong>Semester 6</strong>
+            <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
+        </h3>
+        </a>
+        <div class="row" id="sem6-table">
+
+            <table class="table" >
+
+                <colgroup span="2"></colgroup>
+                <colgroup span="2"></colgroup>
+                <tr class="header">
+                    <th rowspan="2" colspan="1">Course Code </th>
+                    <th rowspan="2" colspan="1">Course Title</th>
+                    <th colspan="4" rowspan="1">Total Number of Contact Hours </th>
+                    <th rowspan="2" colspan="1">Credits </th>
+                </tr>
+                <tr>
+
+                    <td colspan="1">Lecture (L)</td>
+                    <td>Tutorial (T)</td>
+                    <td>Practical (P)</td>
+                    <td>Total Hours</td>
+
+
+                </tr>
+
+
+                <tr><td>CEN 601	</td><td>Analysis & Design of Algorithms	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+                <tr><td>CEN 602	</td><td>Software Engineering	</td><td>2	</td><td>1	</td><td>0</td><td>	4</td><td>	3</td></tr>
+                <tr><td>CEN 603	</td><td>Compiler Design	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+                <tr><td>CEN 604	</td><td>Embedded Systems	</td><td>3	</td><td>1	</td><td>0</td><td>	2</td><td>	4</td></tr>
+                <tr><td>CEN 605	</td><td>Parallel Computing	</td><td>2	</td><td>1	</td><td>0</td><td>	4</td><td>	3</td></tr>
+                <tr><td>CEN 691</td><td>	Embedded Systems Lab	</td><td>0	</td><td>0	</td><td>2</td><td>	4</td><td>	2</td></tr>
+                <tr><td>CEN 692	</td><td>Compiler Design Lab	</td><td>0	</td><td>0	</td><td>2</td><td>	4</td><td>	2</td></tr>
+                <tr><td>CEN 693	</td><td>Seminar	</td><td>0	</td><td>0	</td><td>1</td><td>	2</td><td>	1</td></tr>
+
+
+            </table>
+
+        </div>
+    </div> <div class="row">
+    <a href="#sem7-table" onclick="sem7Function()">
+    <h3 class="well well-sm"><strong>Semester 7</strong>
+        <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
+    </h3>
+    </a>
+    <div class="row" id="sem7-table">
+
+        <table class="table" >
+
+            <colgroup span="2"></colgroup>
+            <colgroup span="2"></colgroup>
+            <tr class="header">
+                <th rowspan="2" colspan="1">Course Code </th>
+                <th rowspan="2" colspan="1">Course Title</th>
+                <th colspan="4" rowspan="1">Total Number of Contact Hours </th>
+                <th rowspan="2" colspan="1">Credits </th>
+            </tr>
+            <tr>
+
+                <td colspan="1">Lecture (L)</td>
+                <td>Tutorial (T)</td>
+                <td>Practical (P)</td>
+                <td>Total Hours</td>
+
+
+            </tr>
+
+            <tr><td>CEN 701</td><td>Data Mining</td><td>	3</td><td>1	</td><td>0	</td><td>4</td><td>	4</td></tr>
+            <tr><td>CEN 7xx	</td><td>Elective I	</td><td>3</td><td>	1</td><td>	0	</td><td>4	</td><td>4</td></tr>
+            <tr><td>CEN 7xx	</td><td>Elective II</td><td>	3	</td><td>1</td><td>	0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 7xx	</td><td>Elective III</td><td>	3</td><td>	1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+
+        </table>
+
+    </div>
+</div>
+    <div class="row">
+        <a href="#sem8-table" onclick="sem8Function()">
+        <h3 class="well well-sm"><strong>Semester 8</strong>
+            <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
+        </h3>
+        </a>
+    </div>
+    <div class="row" id="sem8-table">
+
+        <table class="table" >
+
+            <colgroup span="2"></colgroup>
+            <colgroup span="2"></colgroup>
+            <tr class="header">
+                <th rowspan="2" colspan="1">Course Code </th>
+                <th rowspan="2" colspan="1">Course Title</th>
+                <th colspan="4" rowspan="1">Total Number of Contact Hours </th>
+                <th rowspan="2" colspan="1">Credits </th>
+            </tr>
+            <tr>
+
+                <td colspan="1">Lecture (L)</td>
+                <td>Tutorial (T)</td>
+                <td>Practical (P)</td>
+                <td>Total Hours</td>
+
+
+            </tr>
+
+
+
+
+            <tr><td>CEN 801	</td><td>Software Project Management	</td><td>2	</td><td>1	</td><td>0	</td><td>3	</td><td>3</td></tr>
+            <tr><td>CEN 8xx	</td><td>Elective I	</td><td>2	</td><td>1	</td><td>0	</td><td>3	</td><td>3</td></tr>
+            <tr><td>CEN 8xx	</td><td>Elective II	</td><td>2	</td><td>1	</td><td>0	</td><td>3	</td><td>3</td></tr>
+            <tr><td>CEN 891	</td><td>Lab Based on Elective I	</td><td>0	</td><td>0	</td><td>4	</td><td>2	</td><td>2</td></tr>
+            <tr><td>CEN 892	</td><td>Lab Based on Elective II	</td><td>0	</td><td>0	</td><td>4	</td><td>2	</td><td>2</td></tr>
+            <tr><td>	</td><td>Major Project	</td><td>0	</td><td>0	</td><td>20</td><td>	20	</td><td>10</td></tr>
+
+
+
+        </table>
+
+    </div>
+
+    </div>
+    <div class="row" id="all-content">
+        <input type="text" id="myInput" placeholder="Search Course.." title="Search Course">
+        <table class="table" id="all-table">
+
+            <colgroup span="2"></colgroup>
+            <colgroup span="2"></colgroup>
+            <tr class="header">
+                <th rowspan="2" colspan="1">Course Code </th>
+                <th rowspan="2" colspan="1">Course Title</th>
+                <th colspan="4" rowspan="1">Total Number of Contact Hours </th>
+                <th rowspan="2" colspan="1">Credits </th>
+            </tr>
+            <tr>
+
+                <td colspan="1">Lecture (L)</td>
+                <td>Tutorial (T)</td>
+                <td>Practical (P)</td>
+                <td>Total Hours</td>
+
+
+            </tr>
+            <tr>
+                <td colspan="7"><strong>Semester 1</strong></td>
+            </tr>
+            <tr>
+                <td> AS 101</td> <td>Communication Skills</td> <td>	3</td> <td>0</td> <td>	0</td> <td>	3</td> <td>	3</td>
+            </tr><tr><td> AS 151</td> <td>	Language Lab</td> <td>	0	</td> <td>0</td> <td>2</td> <td>	2	</td> <td>1</td> <td>
+        </tr><tr>   <td>AS 102</td> <td>	Engg. Physics – I</td> <td>	2	</td> <td>1	</td> <td>0</td> <td>	3</td> <td>	3</td> <td>
+        </tr><tr>    <td>AS 152</td> <td>	Engg. Physics  Lab –I</td> <td>	0	</td> <td>0</td> <td>	2	</td> <td>2	</td> <td>1</td> <td>
+        </tr><tr>   <td>AS 103</td> <td>	Engg. Chemistry	2</td> <td>	1</td> <td>	0	</td> <td>3</td> <td>	3</td> <td>
+        </tr><tr>   <td>AS 153</td> <td>	Engg. Chemistry Lab – I</td> <td>	0	</td> <td>0</td> <td>	2</td> <td>	2</td> <td>	1</td> <td>
+        </tr><tr>   <td>AS 104</td> <td>	Engg. Mathematics – I	</td> <td>3	</td> <td>1	</td> <td>0</td> <td>	5</td> <td>	4</td> <td>
+        </tr><tr>   <td>ME 101</td> <td>	Basics of Mech. Engg.	</td> <td>2	</td> <td>1	</td> <td>0</td> <td>	4</td> <td>	3</td> <td>
+        </tr><tr>   <td>CE 101</td> <td>	Basics of Civil & Environmental Engg.	</td> <td>2	</td> <td>1	</td> <td>0	</td> <td>4</td> <td>	3</td> <td>
+        </tr><tr>   <td>EE 101</td> <td>	Basics of Electrical Engineering	</td> <td>2	</td> <td>1	</td> <td>0</td> <td>	4</td> <td>	3</td> <td>
+        </tr><tr>   <td>ME 151</td> <td>	Workshop Practice	</td> <td>0	</td> <td>0	</td> <td>4	</td> <td>6	</td> <td>2</td> <td>
+
+
+
+        </tr>
+            <tr>
+                <td colspan="7"><strong>Semester 2</strong></td>
+            </tr>
+
+            <tr>
+                <td>  AS 201	</td><td>Human Resource Management	</td><td>2	</td><td>1	</td><td>0	</td><td>3	</td><td>3</td>
+            </tr><tr><td>   AS 202</td><td>	Engg. Physics – II</td><td>	2	</td><td>1</td><td>	0	</td><td>3	</td><td>3</td>
+        </tr><tr><td>    AS 252</td><td>	Engg. Physics Lab – II	</td><td>0	</td><td>0	</td><td>2	</td><td>2</td><td>	1</td>
+        </tr><tr><td>   AS 203</td><td>	Engg. Chemistry –II	</td><td>2	</td><td>1	</td><td>0	</td><td>3</td><td>	3</td>
+        </tr><tr><td>   AS 253</td><td>	Engg. Chemistry Lab – II	</td><td>0	</td><td>0	</td><td>2	</td><td>2	</td><td>1</td>
+        </tr><tr><td>    AS 204</td><td>	Engg. Mathematics II</td><td>	3	</td><td>1</td><td>	0</td><td>	4</td><td>	4</td>
+        </tr><tr><td>   AS 205</td><td>	Innovative Sc. & Tech.</td><td>	2</td><td>	1</td><td>	0</td><td>	3</td><td>	3</td>
+        </tr><tr><td>        EC 101</td><td>	Basics of Electronics & Communication</td><td>	2</td><td>	1</td><td>	0</td><td>	3</td><td>	3</td>
+        </tr><tr><td>       CS 101</td><td>	Fundamentals of Computing</td><td>	2	</td><td>0	</td><td>0	</td><td>2	</td><td>3</td>
+        </tr><tr><td>     ME 250</td><td>	Engg. Graphics</td><td>	0</td><td>	0</td><td>	4	</td><td>4</td><td>	2</td>
+
+
+
+        </tr>
+
+
+            <tr>
+                <td colspan="7"><strong>Semester 3</strong></td>
+            </tr>
+
+
+            <tr><td>CEN 301</td><td>Mathematics-III	</td><td>3	</td><td>1	</td><td>0	</td><td>4	</td><td>4</td></tr>
+            <tr><td>CEN 302	</td><td>Discrete Mathematics	</td><td>3	</td><td>1	</td><td>0	</td><td>4	</td><td>4</td></tr>
+            <tr><td>CEN 303	</td><td>Data Structure	</td><td>3	</td><td>1	</td><td>0	</td><td>4	</td><td>4</td></tr>
+            <tr><td>CEN 304	</td><td>Digital Logic Theory	</td><td>2	</td><td>1	</td><td>0	</td><td>4	</td><td>3</td></tr>
+            <tr><td>CEN 305	</td><td>Analog & Digital Communication	</td><td>2	</td><td>1	</td><td>0	</td><td>2	</td><td>3</td></tr>
+            <tr><td>CEN 391	</td><td>Data Structure Lab	</td><td>0	</td><td>0	</td><td>4	</td><td>4	</td><td>2</td></tr>
+            <tr><td>CEN 392	</td><td>C Programming Lab	</td><td>0	</td><td>0	</td><td>4	</td><td>4	</td><td>2</td></tr>
+            <tr><td>CEN 393	</td><td>DLT Lab	</td><td>0	</td><td>0	</td><td>2	</td><td>2	</td><td>1</td></tr>
+
+            <tr>
+                <td colspan="7"><strong>Semester 4</strong></td>
+            </tr>
+            <tr><td>CEN 401	</td><td>Mathematics-IV	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 402	</td><td>Computer Organization	</td><td>2	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 403	</td><td>System Software	</td><td>2	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 404	</td><td>Operating System	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 405	</td><td>Database Management Systems	</td><td>3	</td><td>1	</td><td>0</td><td>	3</td><td>	3</td></tr>
+            <tr><td>CEN 491	</td><td>DBMS Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
+            <tr><td>CEN 492	</td><td>Linux Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
+            <tr><td>CEN 493	</td><td>Operating System Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
+            <tr>
+                <td colspan="7"><strong>Semester 5</strong></td>
+            </tr>
+            <tr><td>CEN 501	</td><td>Computer Architecture	</td><td>2	</td><td>1	</td><td>0</td><td>	3</td><td>	3</td></tr>
+            <tr><td>CEN 502	</td><td>Automata Theory	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 503	</td><td>Microprocessor	</td><td>2	</td><td>1	</td><td>0</td><td>	3</td><td>	3</td></tr>
+            <tr><td>CEN 504	</td><td>Object Oriented Programming 	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 505	</td><td>Computer Networks	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 591</td><td>	OOPs Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
+            <tr><td>CEN 592	</td><td>Microprocessor Lab	</td><td>0	</td><td>0	</td><td>2</td><td>	2</td><td>	1</td></tr>
+            <tr><td>CEN 593	</td><td>Computer Network Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
+
+            <tr>
+                <td colspan="7"><strong>Semester 6</strong></td>
+            </tr>
+
+            <tr><td>CEN 601	</td><td>Analysis & Design of Algorithms	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 602	</td><td>Software Engineering	</td><td>2	</td><td>1	</td><td>0</td><td>	4</td><td>	3</td></tr>
+            <tr><td>CEN 603	</td><td>Compiler Design	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 604	</td><td>Embedded Systems	</td><td>3	</td><td>1	</td><td>0</td><td>	2</td><td>	4</td></tr>
+            <tr><td>CEN 605	</td><td>Parallel Computing	</td><td>2	</td><td>1	</td><td>0</td><td>	4</td><td>	3</td></tr>
+            <tr><td>CEN 691</td><td>	Embedded Systems Lab	</td><td>0	</td><td>0	</td><td>2</td><td>	4</td><td>	2</td></tr>
+            <tr><td>CEN 692	</td><td>Compiler Design Lab	</td><td>0	</td><td>0	</td><td>2</td><td>	4</td><td>	2</td></tr>
+            <tr><td>CEN 693	</td><td>Seminar	</td><td>0	</td><td>0	</td><td>1</td><td>	2</td><td>	1</td></tr>
+            <tr>
+                <td colspan="7"><strong>Semester 7</strong></td>
+            </tr>
+            <tr><td>CEN 701</td><td>Data Mining</td><td>	3</td><td>	1	</td><td>0	</td><td>4</td><td>	4</td></tr>
+            <tr><td>CEN 7xx	</td><td>Elective I	</td><td>3</td><td>	1</td><td>	0	</td><td>4	</td><td>4</td></tr>
+            <tr><td>CEN 7xx	</td><td>Elective II</td><td>	3	</td><td>1</td><td>	0</td><td>	4</td><td>	4</td></tr>
+            <tr><td>CEN 7xx	</td><td>Elective III</td><td>	3</td><td>	1	</td><td>0</td><td>	4</td><td>	4</td></tr>
+
+            <tr>
+                <td colspan="7"><strong>Semester 8</strong></td>
+            </tr>
+
+
+
+
+            <tr><td>CEN 801	</td><td>Software Project Management	</td><td>2	</td><td>1	</td><td>0	</td><td>3	</td><td>3</td></tr>
+            <tr><td>CEN 8xx	</td><td>Elective I	</td><td>2	</td><td>1	</td><td>0	</td><td>3	</td><td>3</td></tr>
+            <tr><td>CEN 8xx	</td><td>Elective II	</td><td>2	</td><td>1	</td><td>0	</td><td>3	</td><td>3</td></tr>
+            <tr><td>CEN 891	</td><td>Lab Based on Elective I	</td><td>0	</td><td>0	</td><td>4	</td><td>2	</td><td>2</td></tr>
+            <tr><td>CEN 892	</td><td>Lab Based on Elective II	</td><td>0	</td><td>0	</td><td>4	</td><td>2	</td><td>2</td></tr>
+            <tr><td></td><td>Major Project	</td><td>0	</td><td>0	</td><td>20</td><td>	20	</td><td>10</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </table>
+
+</div>
+
+</div>
+<style>
+    #myInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+    }
+</style>
+<script>
+    w3.includeHTML();
+    $(document).ready(function () {
+        var x1 = document.getElementById("sem1-table");
+        var x2 = document.getElementById("sem2-table");
+        var x3 = document.getElementById("sem3-table");
+        var x4= document.getElementById("sem4-table");
+
+        var x5= document.getElementById("sem5-table");
+        var x6= document.getElementById("sem6-table");
+        var x7= document.getElementById("sem7-table");
+        var x8= document.getElementById("sem8-table");
+        x2.style.display = "none";
+        x1.style.display = "none";
+        x3.style.display = "none";
+        x4.style.display = "none";
+        x5.style.display = "none";
+        x6.style.display = "none";
+        x7.style.display = "none";
+        x8.style.display = "none";
+        document.getElementById('all-content').style.display="none"
+    });
+
+    function sem1Function() {
+        var x1 = document.getElementById("sem1-table");
+        var x2 = document.getElementById("sem2-table");
+        var x3 = document.getElementById("sem3-table");
+        var x4= document.getElementById("sem4-table");
+
+        var x5= document.getElementById("sem5-table");
+        var x6= document.getElementById("sem6-table");
+        var x7= document.getElementById("sem7-table");
+        var x8= document.getElementById("sem8-table");
+        if (x1.style.display === "none") {
+            x1.style.display = "block";
+        } else {
+            x1.style.display = "none";
+        }
+        x2.style.display = "none";
+        x3.style.display = "none";
+        x4.style.display = "none";
+        x5.style.display = "none";
+        x6.style.display = "none";
+        x7.style.display = "none";
+        x8.style.display = "none";
+
+    }
+    function sem2Function() {
+        var x1 = document.getElementById("sem1-table");
+        var x2 = document.getElementById("sem2-table");
+        var x3 = document.getElementById("sem3-table");
+        var x4= document.getElementById("sem4-table");
+
+        var x5= document.getElementById("sem5-table");
+        var x6= document.getElementById("sem6-table");
+        var x7= document.getElementById("sem7-table");
+        var x8= document.getElementById("sem8-table");
+        var x = document.getElementById("sem2-table");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        x1.style.display = "none";
+        x3.style.display = "none";
+        x4.style.display = "none";
+        x5.style.display = "none";
+        x6.style.display = "none";
+        x7.style.display = "none";
+        x8.style.display = "none";
+    }
+    function sem3Function() {
+        var x1 = document.getElementById("sem1-table");
+        var x2 = document.getElementById("sem2-table");
+        var x3 = document.getElementById("sem3-table");
+        var x4= document.getElementById("sem4-table");
+
+        var x5= document.getElementById("sem5-table");
+        var x6= document.getElementById("sem6-table");
+        var x7= document.getElementById("sem7-table");
+        var x8= document.getElementById("sem8-table");
+        var x = document.getElementById("sem3-table");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        x2.style.display = "none";
+        x1.style.display = "none";
+        x4.style.display = "none";
+        x5.style.display = "none";
+        x6.style.display = "none";
+        x7.style.display = "none";
+        x8.style.display = "none";
+    }
+    function sem4Function() {
+        var x1 = document.getElementById("sem1-table");
+        var x2 = document.getElementById("sem2-table");
+        var x3 = document.getElementById("sem3-table");
+        var x4= document.getElementById("sem4-table");
+
+        var x5= document.getElementById("sem5-table");
+        var x6= document.getElementById("sem6-table");
+        var x7= document.getElementById("sem7-table");
+        var x8= document.getElementById("sem8-table");
+        var x = document.getElementById("sem4-table");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        x2.style.display = "none";
+        x3.style.display = "none";
+        x1.style.display = "none";
+        x5.style.display = "none";
+        x6.style.display = "none";
+        x7.style.display = "none";
+        x8.style.display = "none";
+    }
+    function sem5Function() {
+        var x1 = document.getElementById("sem1-table");
+        var x2 = document.getElementById("sem2-table");
+        var x3 = document.getElementById("sem3-table");
+        var x4= document.getElementById("sem4-table");
+
+        var x5= document.getElementById("sem5-table");
+        var x6= document.getElementById("sem6-table");
+        var x7= document.getElementById("sem7-table");
+        var x8= document.getElementById("sem8-table");
+        var x = document.getElementById("sem5-table");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        x2.style.display = "none";
+        x3.style.display = "none";
+        x4.style.display = "none";
+        x1.style.display = "none";
+        x6.style.display = "none";
+        x7.style.display = "none";
+        x8.style.display = "none";
+    }
+    function sem6Function() {
+        var x1 = document.getElementById("sem1-table");
+        var x2 = document.getElementById("sem2-table");
+        var x3 = document.getElementById("sem3-table");
+        var x4= document.getElementById("sem4-table");
+
+        var x5= document.getElementById("sem5-table");
+        var x6= document.getElementById("sem6-table");
+        var x7= document.getElementById("sem7-table");
+        var x8= document.getElementById("sem8-table");
+        var x = document.getElementById("sem6-table");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        x2.style.display = "none";
+        x3.style.display = "none";
+        x4.style.display = "none";
+        x5.style.display = "none";
+        x1.style.display = "none";
+        x7.style.display = "none";
+        x8.style.display = "none";
+    }
+    function sem7Function() {
+        var x1 = document.getElementById("sem1-table");
+        var x2 = document.getElementById("sem2-table");
+        var x3 = document.getElementById("sem3-table");
+        var x4= document.getElementById("sem4-table");
+
+        var x5= document.getElementById("sem5-table");
+        var x6= document.getElementById("sem6-table");
+        var x7= document.getElementById("sem7-table");
+        var x8= document.getElementById("sem8-table");
+        var x = document.getElementById("sem7-table");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        x2.style.display = "none";
+        x3.style.display = "none";
+        x4.style.display = "none";
+        x5.style.display = "none";
+        x6.style.display = "none";
+        x1.style.display = "none";
+        x8.style.display = "none";
+    }
+    function sem8Function() {
+        var x1 = document.getElementById("sem1-table");
+        var x2 = document.getElementById("sem2-table");
+        var x3 = document.getElementById("sem3-table");
+        var x4= document.getElementById("sem4-table");
+
+        var x5= document.getElementById("sem5-table");
+        var x6= document.getElementById("sem6-table");
+        var x7= document.getElementById("sem7-table");
+        var x8= document.getElementById("sem8-table");
+        var x = document.getElementById("sem8-table");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        x2.style.display = "none";
+        x3.style.display = "none";
+        x4.style.display = "none";
+        x5.style.display = "none";
+        x6.style.display = "none";
+        x7.style.display = "none";
+        x1.style.display = "none";
+    }
+</script>
+
+<script>
+    function filterTable(event) {
+    var filter = event.target.value.toUpperCase();
+    var rows = document.querySelector("#all-table tbody").rows;
+
+    for (var i = 0; i < rows.length; i++) {
+        var firstCol = rows[i].cells[0].textContent.toUpperCase();
+        var secondCol = rows[i].cells[1].textContent.toUpperCase();
+        if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }
+    }
+
+}
+    function changeAllContentSection(){
+        var semwise=document.getElementById("sem-wise-content");
+        var allatOnce=document.getElementById("all-content");
+        allatOnce.style.display="block";
+        semwise.style.display="none";
+
+    }
+    function changeSemSection() {
+        var semwise=document.getElementById("sem-wise-content");
+        var allatOnce=document.getElementById("all-content");
+        allatOnce.style.display="none";
+        semwise.style.display="block";
+
+    }
+document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
+</script>
+
+<!--............................FOOTER GOES HERE....................................................................-->
+<div w3-include-html="/footer.html"></div>
+</body>
+</html>
