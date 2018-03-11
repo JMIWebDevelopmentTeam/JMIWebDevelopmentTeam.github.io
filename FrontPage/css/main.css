@@ -25,7 +25,7 @@
 }
 
 .has-bg-image {
-    background-image: url("../front-images/jmi_infra.jpg");
+    background-color: #283593;
     background-size:100% 100%;
 }
 .has-bg-purple * {
