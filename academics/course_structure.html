@@ -21,12 +21,215 @@
     table, th, td {
         text-align: center;
     }
+    body {margin:0;font-family:Arial}
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+        -webkit-animation: fadeEffect 1s;
+        animation: fadeEffect 1s;
+    }
+    /* Fade in tabs */
+    @-webkit-keyframes fadeEffect {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    @keyframes fadeEffect {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    .topnav {
+
+        overflow: hidden;
+        background-color: #333;
+    }
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .active {
+        background-color: #4CAF50;
+        color: white;
+    }
+    .topnav .icon {
+        display: none;
+    }
+    .dropdown1{
+        float: left;
+        overflow: hidden;
+    }
+    .dropdown1 .dropbtn {
+        font-size: 17px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #555;
+        min-width: 90px;
+        width: auto;
+        padding: 2px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content button {
+        float: none;
+        color: black;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav a:hover, .dropdown1:hover .dropbtn {
+        background-color: #555;
+        color: white;
+    }
+    .dropdown-content a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    .dropdown1:hover .dropdown-content {
+        display: block;
+    }
+    @media screen and (max-width: 300px) {
+        .topnav a:not(:last-child), .dropdown .dropbtn {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+    }
+    @media screen and (max-width: 300px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+        .topnav.responsive .dropdown1 {float: none;}
+        .topnav.responsive .dropdown-content {position: relative;}
+        .topnav.responsive .dropdown1 .dropbtn {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+    }
+
 </style>
 <!--======================================NAVBAR ENDS HERE=============================================-->
 <div class="container">
     <div class="row">
         <h2 style="color:#404040;width: auto;margin:7px;width: 100%;text-align: center;"><span class="well well-lg"><strong>Course Structure</strong></span></h2>
         <br>
+
+        <div class="topnav" id="myTopnav" style="margin-top: 20px;margin-bottom: 20px;">
+
+            <div class="dropdown1">
+                <button class="dropbtn" onclick="selectBtech()">B.Tech.
+                    <i class="fa fa-caret-down"></i>
+                </button>
+
+            </div>
+            <div class="dropdown1">
+                <button class="dropbtn" onclick="selectBE()">B.E.
+                    <i class="fa fa-caret-down"></i>
+                </button>
+
+            </div>
+            <div class="dropdown1">
+                <button class="dropbtn" onclick="selectMtech()">M.Tech
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </div>
+            <div class="dropdown1 pull-right">
+                <button class="dropbtn ">Display Filter
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <button class="dropbtn" onclick="changeSemSection()">Display Sem Wise
+
+                    </button>
+                    <button class="dropbtn" onclick="changeAllContentSection()">Display All at once
+
+                    </button>
+                </div>
+            </div>
+
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <div id="bt2" class="tabcontent">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="dropdown" style="margin: 10px;float: right;">
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Display Filter
                 <span class="caret"></span></button>
@@ -36,16 +239,16 @@
             </ul>
         </div>
     </div>
-    <div class="container" id="sem-wise-content">
+    <div class="container" id="btech-sem-wise-content">
     <div class="row">
-        <a href="#sem1-table" onclick="sem1Function()">
-        <h3 class="well well-sm"><strong>Semester 1</strong>
+        <a href="#btech-sem1-table" onclick="btechsem1Function()">
+        <h3 class="well well-sm" style="margin: 4px;" ><strong>B.Tech Semester 1</strong>
             <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
         </h3>
         </a>
 
     </div>
-    <div class="row" id="sem1-table">
+    <div class="row" id="btech-sem1-table">
 
         <table class="table" >
 
@@ -87,13 +290,13 @@
 
     </div>
     <div class="row">
-        <a href="#sem2-table" onclick="sem2Function()">
-        <h3 class="well well-sm"><strong>Semester 2</strong>
+        <a href="#btech-sem2-table" onclick="btechsem2Function()">
+        <h3 class="well well-sm" style="margin: 4px;" ><strong>B.Tech Semester 2</strong>
             <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
         </h3>
         </a>
     </div>
-    <div class="row" id="sem2-table">
+    <div class="row" id="btech-sem2-table">
 
         <table class="table" >
 
@@ -134,14 +337,14 @@
 
     </div>
     <div class="row">
-        <a href="#sem3-table" onclick="sem3Function()">
-        <h3 class="well well-sm"><strong>Semester 3</strong>
+        <a href="#btech-sem3-table" onclick="btechsem3Function()">
+        <h3 class="well well-sm" style="margin: 4px;"><strong>B.Tech Semester 3</strong>
             <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
         </h3>
         </a>
 
     </div>
-    <div class="row" id="sem3-table">
+    <div class="row" id="btech-sem3-table">
 
         <table class="table" >
 
@@ -179,13 +382,13 @@
     </div>
 
     <div class="row">
-        <a href="#sem4-table" onclick="sem4Function()">
-        <h3 class="well well-sm"><strong>Semester 4</strong>
+        <a href="#btech-sem4-table" onclick="btechsem4Function()">
+        <h3 class="well well-sm" style="margin: 4px;"><strong>B.Tech Semester 4</strong>
             <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
         </h3>
         </a>
     </div>
-    <div class="row" id="sem4-table">
+    <div class="row" id="btech-sem4-table">
 
         <table class="table" >
 
@@ -220,14 +423,14 @@
 
     </div>
     <div class="row">
-        <a href="#sem5-table" onclick="sem5Function()">
-        <h3 class="well well-sm"><strong>Semester 5</strong>
+        <a href="#btech-sem5-table" onclick="btechsem5Function()">
+        <h3 class="well well-sm" style="margin: 4px;"><strong>B.Tech Semester 5</strong>
             <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
         </h3>
         </a>
 
     </div>
-    <div class="row" id="sem5-table">
+    <div class="row" id="btech-sem5-table">
 
         <table class="table" >
 
@@ -262,12 +465,12 @@
 
     </div>
     <div class="row">
-        <a href="#sem6-table" onclick="sem6Function()">
-        <h3 class="well well-sm"><strong>Semester 6</strong>
+        <a href="#btech-sem6-table" onclick="btechsem6Function()">
+        <h3 class="well well-sm" style="margin: 4px;"><strong>B.Tech Semester 6</strong>
             <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
         </h3>
         </a>
-        <div class="row" id="sem6-table">
+        <div class="row" id="btech-sem6-table">
 
             <table class="table" >
 
@@ -304,12 +507,12 @@
 
         </div>
     </div> <div class="row">
-    <a href="#sem7-table" onclick="sem7Function()">
-    <h3 class="well well-sm"><strong>Semester 7</strong>
+    <a href="#btech-sem7-table" onclick="btechsem7Function()">
+    <h3 class="well well-sm" style="margin: 4px;"><strong>B.Tech Semester 7</strong>
         <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
     </h3>
     </a>
-    <div class="row" id="sem7-table">
+    <div class="row" id="btech-sem7-table">
 
         <table class="table" >
 
@@ -341,13 +544,13 @@
     </div>
 </div>
     <div class="row">
-        <a href="#sem8-table" onclick="sem8Function()">
-        <h3 class="well well-sm"><strong>Semester 8</strong>
+        <a href="#btech-sem8-table" onclick="btechsem8Function()">
+        <h3 class="well well-sm" style="margin: 4px;"><strong>B.Tech Semester 8</strong>
             <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
         </h3>
         </a>
     </div>
-    <div class="row" id="sem8-table">
+    <div class="row" id="btech-sem8-table">
 
         <table class="table" >
 
@@ -386,9 +589,9 @@
     </div>
 
     </div>
-    <div class="row" id="all-content">
-        <input type="text" id="myInput" placeholder="Search Course.." title="Search Course">
-        <table class="table" id="all-table">
+    <div class="row" id="btech-all-content">
+        <input type="text" id="btechInput" placeholder="Search Course.." title="Search Course">
+        <table class="table" id="btech-all-table">
 
             <colgroup span="2"></colgroup>
             <colgroup span="2"></colgroup>
@@ -408,7 +611,7 @@
 
             </tr>
             <tr>
-                <td colspan="7"><strong>Semester 1</strong></td><td></td>
+                <td colspan="7"><strong>B.Tech Semester 1</strong></td><td></td>
             </tr>
             <tr>
                 <td> AS 101</td> <td>Communication Skills</td> <td>	3</td> <td>0</td> <td>	0</td> <td>	3</td> <td>	3</td>
@@ -427,7 +630,7 @@
 
         </tr>
             <tr>
-                <td colspan="7"><strong>Semester 2</strong></td><td></td>
+                <td colspan="7"><strong>B.Tech Semester 2</strong></td><td></td>
             </tr>
 
             <tr>
@@ -448,7 +651,7 @@
 
 
             <tr>
-                <td colspan="7"><strong>Semester 3</strong></td><td></td>
+                <td colspan="7"><strong>B.Tech Semester 3</strong></td><td></td>
             </tr>
 
 
@@ -462,7 +665,7 @@
             <tr><td>CEN 393	</td><td>DLT Lab	</td><td>0	</td><td>0	</td><td>2	</td><td>2	</td><td>1</td></tr>
 
             <tr>
-                <td colspan="7"><strong>Semester 4</strong></td><td></td>
+                <td colspan="7"><strong>B.Tech Semester 4</strong></td><td></td>
             </tr>
             <tr><td>CEN 401	</td><td>Mathematics-IV	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
             <tr><td>CEN 402	</td><td>Computer Organization	</td><td>2	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
@@ -473,7 +676,7 @@
             <tr><td>CEN 492	</td><td>Linux Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
             <tr><td>CEN 493	</td><td>Operating System Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
             <tr>
-                <td colspan="7"><strong>Semester 5</strong></td><td></td>
+                <td colspan="7"><strong>B.Tech Semester 5</strong></td><td></td>
             </tr>
             <tr><td>CEN 501	</td><td>Computer Architecture	</td><td>2	</td><td>1	</td><td>0</td><td>	3</td><td>	3</td></tr>
             <tr><td>CEN 502	</td><td>Automata Theory	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
@@ -485,7 +688,7 @@
             <tr><td>CEN 593	</td><td>Computer Network Lab	</td><td>0	</td><td>0	</td><td>4</td><td>	4</td><td>	2</td></tr>
 
             <tr>
-                <td colspan="7"><strong>Semester 6</strong></td><td></td>
+                <td colspan="7"><strong>B.Tech Semester 6</strong></td><td></td>
             </tr>
 
             <tr><td>CEN 601	</td><td>Analysis & Design of Algorithms	</td><td>3	</td><td>1	</td><td>0</td><td>	4</td><td>	4</td></tr>
@@ -497,7 +700,7 @@
             <tr><td>CEN 692	</td><td>Compiler Design Lab	</td><td>0	</td><td>0	</td><td>2</td><td>	4</td><td>	2</td></tr>
             <tr><td>CEN 693	</td><td>Seminar	</td><td>0	</td><td>0	</td><td>1</td><td>	2</td><td>	1</td></tr>
             <tr>
-                <td colspan="7"><strong>Semester 7</strong></td><td></td>
+                <td colspan="7"><strong>B.Tech Semester 7</strong></td><td></td>
             </tr>
             <tr><td>CEN 701</td><td>Data Mining</td><td>	3</td><td>	1	</td><td>0	</td><td>4</td><td>	4</td></tr>
             <tr><td>CEN 7xx	</td><td>Elective I	</td><td>3</td><td>	1</td><td>	0	</td><td>4	</td><td>4</td></tr>
@@ -505,7 +708,7 @@
             <tr><td>CEN 7xx	</td><td>Elective III</td><td>	3</td><td>	1	</td><td>0</td><td>	4</td><td>	4</td></tr>
 
             <tr>
-                <td colspan="7"><strong>Semester 8</strong></td><td></td>
+                <td colspan="7"><strong>B.Tech Semester 8</strong></td><td></td>
             </tr>
 
 
@@ -521,54 +724,334 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </table>
-		
-<script>
-    function filterTable(event) {
-    var filter = event.target.value.toUpperCase();
-    var rows = document.querySelector("#all-table tbody").rows;
-    for (var i = 0; i < rows.length; i++) {
-        var firstCol = rows[i].cells[0].textContent.toUpperCase();
-        var secondCol = rows[i].cells[1].textContent.toUpperCase();
-        if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1) {
-			rows[0].style.display = "";
-			rows[1].style.display = "";
-            rows[i].style.display = "";
-        } 
-		else {
-            rows[i].style.display = "none";
-        }
-    }
-}
-document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
 
-</script>
+
+
+
 
 </div>
 
-</div>
+        <div class="container" id="mtech-sem-wise-content">
+            <div class="row">
+                <a href="#mtech-sem1-table" onclick="mtechsem1Function()">
+                    <h3 class="well well-sm" style="margin: 4px;" ><strong>M.Tech Semester 1</strong>
+                        <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
+                    </h3>
+                </a>
+
+            </div>
+            <div class="row" id="mtech-sem1-table">
+
+                <table class="table" >
+
+                    <colgroup span="2"></colgroup>
+                    <colgroup span="2"></colgroup>
+                    <tr class="header">
+                        <th rowspan="2" colspan="1">Course Code </th>
+                        <th rowspan="2" colspan="1">Course Title</th>
+                        <th colspan="4" rowspan="1">Total Number of Contact Hours </th>
+                        <th rowspan="2" colspan="1">Credits </th>
+                    </tr>
+                    <tr>
+
+                        <td colspan="1">Lecture (L)</td>
+                        <td>Tutorial (T)</td>
+                        <td>Practical (P)</td>
+                        <td>Total Hours</td>
+
+
+                    </tr>
+                    <tr>
+                        <td> AS 101</td> <td>Communication Skills</td> <td>	3</td> <td>0</td> <td>	0</td> <td>	3</td> <td>	3</td>
+                    </tr><tr><td> AS 151</td> <td>	Language Lab</td> <td>	0	</td> <td>0</td> <td>2</td> <td>	2	</td> <td>1</td> <td>
+                </tr><tr>   <td>AS 102</td> <td>	Engg. Physics – I</td> <td>	2	</td> <td>1	</td> <td>0</td> <td>	3</td> <td>	3</td> <td>
+                </tr><tr>    <td>AS 152</td> <td>	Engg. Physics  Lab –I</td> <td>	0	</td> <td>0</td> <td>	2	</td> <td>2	</td> <td>1</td> <td>
+                </tr><tr>   <td>AS 103</td> <td>	Engg. Chemistry	2</td> <td>	1</td> <td>	0	</td> <td>3</td> <td>	3</td> <td>
+                </tr><tr>   <td>AS 153</td> <td>	Engg. Chemistry Lab – I</td> <td>	0	</td> <td>0</td> <td>	2</td> <td>	2</td> <td>	1</td> <td>
+                </tr><tr>   <td>AS 104</td> <td>	Engg. Mathematics – I	</td> <td>3	</td> <td>1	</td> <td>0</td> <td>	5</td> <td>	4</td> <td>
+                </tr><tr>   <td>ME 101</td> <td>	Basics of Mech. Engg.	</td> <td>2	</td> <td>1	</td> <td>0</td> <td>	4</td> <td>	3</td> <td>
+                </tr><tr>   <td>CE 101</td> <td>	Basics of Civil & Environmental Engg.	</td> <td>2	</td> <td>1	</td> <td>0	</td> <td>4</td> <td>	3</td> <td>
+                </tr><tr>   <td>EE 101</td> <td>	Basics of Electrical Engineering	</td> <td>2	</td> <td>1	</td> <td>0</td> <td>	4</td> <td>	3</td> <td>
+                </tr><tr>   <td>ME 151</td> <td>	Workshop Practice	</td> <td>0	</td> <td>0	</td> <td>4	</td> <td>6	</td> <td>2</td> <td>
+
+
+
+                </tr>
+
+                </table>
+
+            </div>
+            <div class="row">
+                <a href="#mtech-sem2-table" onclick="mtechsem2Function()">
+                    <h3 class="well well-sm" style="margin: 4px;" ><strong>M.Tech Semester 2</strong>
+                        <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
+                    </h3>
+                </a>
+            </div>
+            <div class="row" id="mtech-sem2-table">
+
+                <table class="table" >
+
+                    <colgroup span="2"></colgroup>
+                    <colgroup span="2"></colgroup>
+                    <tr class="header">
+                        <th rowspan="2" colspan="1">Course Code </th>
+                        <th rowspan="2" colspan="1">Course Title</th>
+                        <th colspan="4" rowspan="1">Total Number of Contact Hours </th>
+                        <th rowspan="2" colspan="1">Credits </th>
+                    </tr>
+                    <tr>
+
+                        <td colspan="1">Lecture (L)</td>
+                        <td>Tutorial (T)</td>
+                        <td>Practical (P)</td>
+                        <td>Total Hours</td>
+
+
+                    </tr>
+                    <tr>
+                        <td>  AS 201	</td><td>Human Resource Management	</td><td>2	</td><td>1	</td><td>0	</td><td>3	</td><td>3</td>
+                    </tr><tr><td>   AS 202</td><td>	Engg. Physics – II</td><td>	2	</td><td>1</td><td>	0	</td><td>3	</td><td>3</td>
+                </tr><tr><td>    AS 252</td><td>	Engg. Physics Lab – II	</td><td>0	</td><td>0	</td><td>2	</td><td>2</td><td>	1</td>
+                </tr><tr><td>   AS 203</td><td>	Engg. Chemistry –II	</td><td>2	</td><td>1	</td><td>0	</td><td>3</td><td>	3</td>
+                </tr><tr><td>   AS 253</td><td>	Engg. Chemistry Lab – II	</td><td>0	</td><td>0	</td><td>2	</td><td>2	</td><td>1</td>
+                </tr><tr><td>    AS 204</td><td>	Engg. Mathematics II</td><td>	3	</td><td>1</td><td>	0</td><td>	4</td><td>	4</td>
+                </tr><tr><td>   AS 205</td><td>	Innovative Sc. & Tech.</td><td>	2</td><td>	1</td><td>	0</td><td>	3</td><td>	3</td>
+                </tr><tr><td>        EC 101</td><td>	Basics of Electronics & Communication</td><td>	2</td><td>	1</td><td>	0</td><td>	3</td><td>	3</td>
+                </tr><tr><td>       CS 101</td><td>	Fundamentals of Computing</td><td>	2	</td><td>0	</td><td>0	</td><td>2	</td><td>3</td>
+                </tr><tr><td>     ME 250</td><td>	Engg. Graphics</td><td>	0</td><td>	0</td><td>	4	</td><td>4</td><td>	2</td>
+
+
+
+                </tr>
+
+                </table>
+
+            </div>
+            <div class="row">
+                <a href="#mtech-sem3-table" onclick="mtechsem3Function()">
+                    <h3 class="well well-sm" style="margin: 4px;" ><strong>M.Tech Semester 3</strong>
+                        <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
+                    </h3>
+                </a>
+            </div>
+            <div class="row" id="mtech-sem3-table">
+
+                <table class="table" >
+
+                    <colgroup span="2"></colgroup>
+                    <colgroup span="2"></colgroup>
+                    <tr class="header">
+                        <th rowspan="2" colspan="1">Course Code </th>
+                        <th rowspan="2" colspan="1">Course Title</th>
+                        <th colspan="4" rowspan="1">Total Number of Contact Hours </th>
+                        <th rowspan="2" colspan="1">Credits </th>
+                    </tr>
+                    <tr>
+
+                        <td colspan="1">Lecture (L)</td>
+                        <td>Tutorial (T)</td>
+                        <td>Practical (P)</td>
+                        <td>Total Hours</td>
+
+
+                    </tr>
+                    <tr>
+                        <td>  AS 201	</td><td>Human Resource Management	</td><td>2	</td><td>1	</td><td>0	</td><td>3	</td><td>3</td>
+                    </tr><tr><td>   AS 202</td><td>	Engg. Physics – II</td><td>	2	</td><td>1</td><td>	0	</td><td>3	</td><td>3</td>
+                </tr><tr><td>    AS 252</td><td>	Engg. Physics Lab – II	</td><td>0	</td><td>0	</td><td>2	</td><td>2</td><td>	1</td>
+                </tr><tr><td>   AS 203</td><td>	Engg. Chemistry –II	</td><td>2	</td><td>1	</td><td>0	</td><td>3</td><td>	3</td>
+                </tr><tr><td>   AS 253</td><td>	Engg. Chemistry Lab – II	</td><td>0	</td><td>0	</td><td>2	</td><td>2	</td><td>1</td>
+                </tr><tr><td>    AS 204</td><td>	Engg. Mathematics II</td><td>	3	</td><td>1</td><td>	0</td><td>	4</td><td>	4</td>
+                </tr><tr><td>   AS 205</td><td>	Innovative Sc. & Tech.</td><td>	2</td><td>	1</td><td>	0</td><td>	3</td><td>	3</td>
+                </tr><tr><td>        EC 101</td><td>	Basics of Electronics & Communication</td><td>	2</td><td>	1</td><td>	0</td><td>	3</td><td>	3</td>
+                </tr><tr><td>       CS 101</td><td>	Fundamentals of Computing</td><td>	2	</td><td>0	</td><td>0	</td><td>2	</td><td>3</td>
+                </tr><tr><td>     ME 250</td><td>	Engg. Graphics</td><td>	0</td><td>	0</td><td>	4	</td><td>4</td><td>	2</td>
+
+
+
+                </tr>
+
+                </table>
+
+            </div>
+            <div class="row">
+                <a href="#mtech-sem4-table" onclick="mtechsem4Function()">
+                    <h3 class="well well-sm" style="margin: 4px;" ><strong>M.Tech Semester 4</strong>
+                        <span class="glyphicon glyphicon-menu-down" style="float: right;"></span>
+                    </h3>
+                </a>
+            </div>
+            <div class="row" id="mtech-sem4-table">
+
+                <table class="table" >
+
+                    <colgroup span="2"></colgroup>
+                    <colgroup span="2"></colgroup>
+                    <tr class="header">
+                        <th rowspan="2" colspan="1">Course Code </th>
+                        <th rowspan="2" colspan="1">Course Title</th>
+                        <th colspan="4" rowspan="1">Total Number of Contact Hours </th>
+                        <th rowspan="2" colspan="1">Credits </th>
+                    </tr>
+                    <tr>
+
+                        <td colspan="1">Lecture (L)</td>
+                        <td>Tutorial (T)</td>
+                        <td>Practical (P)</td>
+                        <td>Total Hours</td>
+
+
+                    </tr>
+                    <tr>
+                        <td>  AS 201	</td><td>Human Resource Management	</td><td>2	</td><td>1	</td><td>0	</td><td>3	</td><td>3</td>
+                    </tr><tr><td>   AS 202</td><td>	Engg. Physics – II</td><td>	2	</td><td>1</td><td>	0	</td><td>3	</td><td>3</td>
+                </tr><tr><td>    AS 252</td><td>	Engg. Physics Lab – II	</td><td>0	</td><td>0	</td><td>2	</td><td>2</td><td>	1</td>
+                </tr><tr><td>   AS 203</td><td>	Engg. Chemistry –II	</td><td>2	</td><td>1	</td><td>0	</td><td>3</td><td>	3</td>
+                </tr><tr><td>   AS 253</td><td>	Engg. Chemistry Lab – II	</td><td>0	</td><td>0	</td><td>2	</td><td>2	</td><td>1</td>
+                </tr><tr><td>    AS 204</td><td>	Engg. Mathematics II</td><td>	3	</td><td>1</td><td>	0</td><td>	4</td><td>	4</td>
+                </tr><tr><td>   AS 205</td><td>	Innovative Sc. & Tech.</td><td>	2</td><td>	1</td><td>	0</td><td>	3</td><td>	3</td>
+                </tr><tr><td>        EC 101</td><td>	Basics of Electronics & Communication</td><td>	2</td><td>	1</td><td>	0</td><td>	3</td><td>	3</td>
+                </tr><tr><td>       CS 101</td><td>	Fundamentals of Computing</td><td>	2	</td><td>0	</td><td>0	</td><td>2	</td><td>3</td>
+                </tr><tr><td>     ME 250</td><td>	Engg. Graphics</td><td>	0</td><td>	0</td><td>	4	</td><td>4</td><td>	2</td>
+
+
+
+                </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+        <div class="row" id="mtech-all-content">
+            <input type="text" id="mtechInput" placeholder="Search Course.." title="Search Course">
+            <table class="table" id="mtech-all-table">
+
+                <colgroup span="2"></colgroup>
+                <colgroup span="2"></colgroup>
+                <tr class="header">
+                    <th rowspan="2" colspan="1">Course Code </th>
+                    <th rowspan="2" colspan="1">Course Title</th>
+                    <th colspan="4" rowspan="1">Total Number of Contact Hours </th>
+                    <th rowspan="2" colspan="1">Credits </th>
+                </tr>
+                <tr>
+
+                    <td colspan="1">Lecture (L)</td>
+                    <td>Tutorial (T)</td>
+                    <td>Practical (P)</td>
+                    <td>Total Hours</td>
+
+
+                </tr>
+                <tr>
+                    <td colspan="7"><strong>M.Tech Semester 1</strong></td><td></td>
+                </tr>
+                <tr>
+                    <td> AS 101</td> <td>Communication Skills</td> <td>	3</td> <td>0</td> <td>	0</td> <td>	3</td> <td>	3</td>
+                </tr><tr><td> AS 151</td> <td>	Language Lab</td> <td>	0	</td> <td>0</td> <td>2</td> <td>	2	</td> <td>1</td> <td>
+            </tr><tr>   <td>AS 102</td> <td>	Engg. Physics – I</td> <td>	2	</td> <td>1	</td> <td>0</td> <td>	3</td> <td>	3</td> <td>
+            </tr><tr>    <td>AS 152</td> <td>	Engg. Physics  Lab –I</td> <td>	0	</td> <td>0</td> <td>	2	</td> <td>2	</td> <td>1</td> <td>
+            </tr><tr>   <td>AS 103</td> <td>	Engg. Chemistry	2</td> <td>	1</td> <td>	0	</td> <td>3</td> <td>	3</td> <td>
+            </tr><tr>   <td>AS 153</td> <td>	Engg. Chemistry Lab – I</td> <td>	0	</td> <td>0</td> <td>	2</td> <td>	2</td> <td>	1</td> <td>
+            </tr><tr>   <td>AS 104</td> <td>	Engg. Mathematics – I	</td> <td>3	</td> <td>1	</td> <td>0</td> <td>	5</td> <td>	4</td> <td>
+            </tr><tr>   <td>ME 101</td> <td>	Basics of Mech. Engg.	</td> <td>2	</td> <td>1	</td> <td>0</td> <td>	4</td> <td>	3</td> <td>
+            </tr><tr>   <td>CE 101</td> <td>	Basics of Civil & Environmental Engg.	</td> <td>2	</td> <td>1	</td> <td>0	</td> <td>4</td> <td>	3</td> <td>
+            </tr><tr>   <td>EE 101</td> <td>	Basics of Electrical Engineering	</td> <td>2	</td> <td>1	</td> <td>0</td> <td>	4</td> <td>	3</td> <td>
+            </tr><tr>   <td>ME 151</td> <td>	Workshop Practice	</td> <td>0	</td> <td>0	</td> <td>4	</td> <td>6	</td> <td>2</td> <td>
+
+
+
+            </tr>
+                <tr>
+                    <td colspan="7"><strong>M.Tech Semester 2</strong></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>  AS 201	</td><td>Human Resource Management	</td><td>2	</td><td>1	</td><td>0	</td><td>3	</td><td>3</td>
+                </tr><tr><td>   AS 202</td><td>	Engg. Physics – II</td><td>	2	</td><td>1</td><td>	0	</td><td>3	</td><td>3</td>
+            </tr><tr><td>    AS 252</td><td>	Engg. Physics Lab – II	</td><td>0	</td><td>0	</td><td>2	</td><td>2</td><td>	1</td>
+            </tr><tr><td>   AS 203</td><td>	Engg. Chemistry –II	</td><td>2	</td><td>1	</td><td>0	</td><td>3</td><td>	3</td>
+            </tr><tr><td>   AS 253</td><td>	Engg. Chemistry Lab – II	</td><td>0	</td><td>0	</td><td>2	</td><td>2	</td><td>1</td>
+            </tr><tr><td>    AS 204</td><td>	Engg. Mathematics II</td><td>	3	</td><td>1</td><td>	0</td><td>	4</td><td>	4</td>
+            </tr><tr><td>   AS 205</td><td>	Innovative Sc. & Tech.</td><td>	2</td><td>	1</td><td>	0</td><td>	3</td><td>	3</td>
+            </tr><tr><td>        EC 101</td><td>	Basics of Electronics & Communication</td><td>	2</td><td>	1</td><td>	0</td><td>	3</td><td>	3</td>
+            </tr><tr><td>       CS 101</td><td>	Fundamentals of Computing</td><td>	2	</td><td>0	</td><td>0	</td><td>2	</td><td>3</td>
+            </tr><tr><td>     ME 250</td><td>	Engg. Graphics</td><td>	0</td><td>	0</td><td>	4	</td><td>4</td><td>	2</td>
+
+
+
+            </tr>
+
+
+
+
+            </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <script>
+                function filterTableBtech(event) {
+                    var filter = event.target.value.toUpperCase();
+                    var rows = document.querySelector("#btech-all-table tbody").rows;
+                    for (var i = 0; i < rows.length; i++) {
+                        var firstCol = rows[i].cells[0].textContent.toUpperCase();
+                        var secondCol = rows[i].cells[1].textContent.toUpperCase();
+                        if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1) {
+                            rows[0].style.display = "";
+                            rows[1].style.display = "";
+                            rows[i].style.display = "";
+                        }
+                        else {
+                            rows[i].style.display = "none";
+                        }
+                    }
+                }
+                document.querySelector('#btechInput').addEventListener('keyup', filterTableBtech, false);
+
+            </script>
+
+        </div>
 <style>
-    #myInput {
+    #btechInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+    }
+    #mtechInput {
         background-image: url('/css/searchicon.png');
         background-position: 10px 10px;
         background-repeat: no-repeat;
@@ -581,15 +1064,30 @@ document.querySelector('#myInput').addEventListener('keyup', filterTable, false)
 </style>
 <script>
     w3.includeHTML();
+    var btech=true;
+    var mtech=false;
+    var be=false;
+    var semwise=document.getElementById("btech-sem-wise-content");
+    var allatOnce=document.getElementById("btech-all-content");
+    var mtechsemwise=document.getElementById("mtech-sem-wise-content");
+    var mtechall=document.getElementById("mtech-all-content");
+    var besemwise=document.getElementById("be-sem-wise-content");
+    var beall=document.getElementById("be-all-content");
+    semwise.style.display='block';
+    allatOnce.style.display='none';
+    mtechsemwise.style.display='none';
+    mtechall.style.display='none';
+    besemwise.style.display='none';
+    beall.style.display='none';
     $(document).ready(function () {
-        var x1 = document.getElementById("sem1-table");
-        var x2 = document.getElementById("sem2-table");
-        var x3 = document.getElementById("sem3-table");
-        var x4= document.getElementById("sem4-table");
-        var x5= document.getElementById("sem5-table");
-        var x6= document.getElementById("sem6-table");
-        var x7= document.getElementById("sem7-table");
-        var x8= document.getElementById("sem8-table");
+        var x1 = document.getElementById("btech-sem1-table");
+        var x2 = document.getElementById("btech-sem2-table");
+        var x3 = document.getElementById("btech-sem3-table");
+        var x4= document.getElementById("btech-sem4-table");
+        var x5= document.getElementById("btech-sem5-table");
+        var x6= document.getElementById("btech-sem6-table");
+        var x7= document.getElementById("btech-sem7-table");
+        var x8= document.getElementById("btech-sem8-table");
         x2.style.display = "none";
         x1.style.display = "none";
         x3.style.display = "none";
@@ -598,17 +1096,17 @@ document.querySelector('#myInput').addEventListener('keyup', filterTable, false)
         x6.style.display = "none";
         x7.style.display = "none";
         x8.style.display = "none";
-        document.getElementById('all-content').style.display="none"
+        document.getElementById('btech-all-content').style.display="none"
     });
-    function sem1Function() {
-        var x1 = document.getElementById("sem1-table");
-        var x2 = document.getElementById("sem2-table");
-        var x3 = document.getElementById("sem3-table");
-        var x4= document.getElementById("sem4-table");
-        var x5= document.getElementById("sem5-table");
-        var x6= document.getElementById("sem6-table");
-        var x7= document.getElementById("sem7-table");
-        var x8= document.getElementById("sem8-table");
+    function btechsem1Function() {
+        var x1 = document.getElementById("btech-sem1-table");
+        var x2 = document.getElementById("btech-sem2-table");
+        var x3 = document.getElementById("btech-sem3-table");
+        var x4= document.getElementById("btech-sem4-table");
+        var x5= document.getElementById("btech-sem5-table");
+        var x6= document.getElementById("btech-sem6-table");
+        var x7= document.getElementById("btech-sem7-table");
+        var x8= document.getElementById("btech-sem8-table");
         if (x1.style.display === "none") {
             x1.style.display = "block";
         } else {
@@ -622,16 +1120,16 @@ document.querySelector('#myInput').addEventListener('keyup', filterTable, false)
         x7.style.display = "none";
         x8.style.display = "none";
     }
-    function sem2Function() {
-        var x1 = document.getElementById("sem1-table");
-        var x2 = document.getElementById("sem2-table");
-        var x3 = document.getElementById("sem3-table");
-        var x4= document.getElementById("sem4-table");
-        var x5= document.getElementById("sem5-table");
-        var x6= document.getElementById("sem6-table");
-        var x7= document.getElementById("sem7-table");
-        var x8= document.getElementById("sem8-table");
-        var x = document.getElementById("sem2-table");
+    function btechsem2Function() {
+        var x1 = document.getElementById("btech-sem1-table");
+        var x2 = document.getElementById("btech-sem2-table");
+        var x3 = document.getElementById("btech-sem3-table");
+        var x4= document.getElementById("btech-sem4-table");
+        var x5= document.getElementById("btech-sem5-table");
+        var x6= document.getElementById("btech-sem6-table");
+        var x7= document.getElementById("btech-sem7-table");
+        var x8= document.getElementById("btech-sem8-table");
+        var x = document.getElementById("btech-sem2-table");
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
@@ -645,16 +1143,16 @@ document.querySelector('#myInput').addEventListener('keyup', filterTable, false)
         x7.style.display = "none";
         x8.style.display = "none";
     }
-    function sem3Function() {
-        var x1 = document.getElementById("sem1-table");
-        var x2 = document.getElementById("sem2-table");
-        var x3 = document.getElementById("sem3-table");
-        var x4= document.getElementById("sem4-table");
-        var x5= document.getElementById("sem5-table");
-        var x6= document.getElementById("sem6-table");
-        var x7= document.getElementById("sem7-table");
-        var x8= document.getElementById("sem8-table");
-        var x = document.getElementById("sem3-table");
+    function btechsem3Function() {
+        var x1 = document.getElementById("btech-sem1-table");
+        var x2 = document.getElementById("btech-sem2-table");
+        var x3 = document.getElementById("btech-sem3-table");
+        var x4= document.getElementById("btech-sem4-table");
+        var x5= document.getElementById("btech-sem5-table");
+        var x6= document.getElementById("btech-sem6-table");
+        var x7= document.getElementById("btech-sem7-table");
+        var x8= document.getElementById("btech-sem8-table");
+        var x = document.getElementById("btech-sem3-table");
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
@@ -668,16 +1166,16 @@ document.querySelector('#myInput').addEventListener('keyup', filterTable, false)
         x7.style.display = "none";
         x8.style.display = "none";
     }
-    function sem4Function() {
-        var x1 = document.getElementById("sem1-table");
-        var x2 = document.getElementById("sem2-table");
-        var x3 = document.getElementById("sem3-table");
-        var x4= document.getElementById("sem4-table");
-        var x5= document.getElementById("sem5-table");
-        var x6= document.getElementById("sem6-table");
-        var x7= document.getElementById("sem7-table");
-        var x8= document.getElementById("sem8-table");
-        var x = document.getElementById("sem4-table");
+    function btechsem4Function() {
+        var x1 = document.getElementById("btech-sem1-table");
+        var x2 = document.getElementById("btech-sem2-table");
+        var x3 = document.getElementById("btech-sem3-table");
+        var x4= document.getElementById("btech-sem4-table");
+        var x5= document.getElementById("btech-sem5-table");
+        var x6= document.getElementById("btech-sem6-table");
+        var x7= document.getElementById("btech-sem7-table");
+        var x8= document.getElementById("btech-sem8-table");
+        var x = document.getElementById("btech-sem4-table");
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
@@ -691,16 +1189,16 @@ document.querySelector('#myInput').addEventListener('keyup', filterTable, false)
         x7.style.display = "none";
         x8.style.display = "none";
     }
-    function sem5Function() {
-        var x1 = document.getElementById("sem1-table");
-        var x2 = document.getElementById("sem2-table");
-        var x3 = document.getElementById("sem3-table");
-        var x4= document.getElementById("sem4-table");
-        var x5= document.getElementById("sem5-table");
-        var x6= document.getElementById("sem6-table");
-        var x7= document.getElementById("sem7-table");
-        var x8= document.getElementById("sem8-table");
-        var x = document.getElementById("sem5-table");
+    function btechsem5Function() {
+        var x1 = document.getElementById("btech-sem1-table");
+        var x2 = document.getElementById("btech-sem2-table");
+        var x3 = document.getElementById("btech-sem3-table");
+        var x4= document.getElementById("btech-sem4-table");
+        var x5= document.getElementById("btech-sem5-table");
+        var x6= document.getElementById("btech-sem6-table");
+        var x7= document.getElementById("btech-sem7-table");
+        var x8= document.getElementById("btech-sem8-table");
+        var x = document.getElementById("btech-sem5-table");
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
@@ -714,16 +1212,16 @@ document.querySelector('#myInput').addEventListener('keyup', filterTable, false)
         x7.style.display = "none";
         x8.style.display = "none";
     }
-    function sem6Function() {
-        var x1 = document.getElementById("sem1-table");
-        var x2 = document.getElementById("sem2-table");
-        var x3 = document.getElementById("sem3-table");
-        var x4= document.getElementById("sem4-table");
-        var x5= document.getElementById("sem5-table");
-        var x6= document.getElementById("sem6-table");
-        var x7= document.getElementById("sem7-table");
-        var x8= document.getElementById("sem8-table");
-        var x = document.getElementById("sem6-table");
+    function btechsem6Function() {
+        var x1 = document.getElementById("btech-sem1-table");
+        var x2 = document.getElementById("btech-sem2-table");
+        var x3 = document.getElementById("btech-sem3-table");
+        var x4= document.getElementById("btech-sem4-table");
+        var x5= document.getElementById("btech-sem5-table");
+        var x6= document.getElementById("btech-sem6-table");
+        var x7= document.getElementById("btech-sem7-table");
+        var x8= document.getElementById("btech-sem8-table");
+        var x = document.getElementById("btech-sem6-table");
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
@@ -737,16 +1235,16 @@ document.querySelector('#myInput').addEventListener('keyup', filterTable, false)
         x7.style.display = "none";
         x8.style.display = "none";
     }
-    function sem7Function() {
-        var x1 = document.getElementById("sem1-table");
-        var x2 = document.getElementById("sem2-table");
-        var x3 = document.getElementById("sem3-table");
-        var x4= document.getElementById("sem4-table");
-        var x5= document.getElementById("sem5-table");
-        var x6= document.getElementById("sem6-table");
-        var x7= document.getElementById("sem7-table");
-        var x8= document.getElementById("sem8-table");
-        var x = document.getElementById("sem7-table");
+    function btechsem7Function() {
+        var x1 = document.getElementById("btech-sem1-table");
+        var x2 = document.getElementById("btech-sem2-table");
+        var x3 = document.getElementById("btech-sem3-table");
+        var x4= document.getElementById("btech-sem4-table");
+        var x5= document.getElementById("btech-sem5-table");
+        var x6= document.getElementById("btech-sem6-table");
+        var x7= document.getElementById("btech-sem7-table");
+        var x8= document.getElementById("btech-sem8-table");
+        var x = document.getElementById("btech-sem7-table");
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
@@ -760,16 +1258,16 @@ document.querySelector('#myInput').addEventListener('keyup', filterTable, false)
         x1.style.display = "none";
         x8.style.display = "none";
     }
-    function sem8Function() {
-        var x1 = document.getElementById("sem1-table");
-        var x2 = document.getElementById("sem2-table");
-        var x3 = document.getElementById("sem3-table");
-        var x4= document.getElementById("sem4-table");
-        var x5= document.getElementById("sem5-table");
-        var x6= document.getElementById("sem6-table");
-        var x7= document.getElementById("sem7-table");
-        var x8= document.getElementById("sem8-table");
-        var x = document.getElementById("sem8-table");
+    function btechsem8Function() {
+        var x1 = document.getElementById("btech-sem1-table");
+        var x2 = document.getElementById("btech-sem2-table");
+        var x3 = document.getElementById("btech-sem3-table");
+        var x4= document.getElementById("btech-sem4-table");
+        var x5= document.getElementById("btech-sem5-table");
+        var x6= document.getElementById("btech-sem6-table");
+        var x7= document.getElementById("btech-sem7-table");
+        var x8= document.getElementById("btech-sem8-table");
+        var x = document.getElementById("btech-sem8-table");
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
@@ -783,20 +1281,163 @@ document.querySelector('#myInput').addEventListener('keyup', filterTable, false)
         x7.style.display = "none";
         x1.style.display = "none";
     }
-</script>
+    function mtechsem1Function() {
+        var x1 = document.getElementById("mtech-sem1-table");
+        var x2 = document.getElementById("mtech-sem2-table");
+        var x3 = document.getElementById("mtech-sem3-table");
+        var x4= document.getElementById("mtech-sem4-table");
+        if (x1.style.display === "none") {
+            x1.style.display = "block";
+        } else {
+            x1.style.display = "none";
+        }
+        x2.style.display = "none";
+        x3.style.display = "none";
+        x4.style.display = "none";
 
-<script>
+    }
+    function mtechsem2Function() {
+        var x1 = document.getElementById("mtech-sem1-table");
+        var x2 = document.getElementById("mtech-sem2-table");
+        var x3 = document.getElementById("mtech-sem3-table");
+        var x4= document.getElementById("mtech-sem4-table");
+        if (x2.style.display === "none") {
+            x2.style.display = "block";
+        } else {
+            x2.style.display = "none";
+        }
+        x1.style.display = "none";
+        x3.style.display = "none";
+        x4.style.display = "none";
+
+    }
+    function mtechsem3Function() {
+        var x1 = document.getElementById("mtech-sem1-table");
+        var x2 = document.getElementById("mtech-sem2-table");
+        var x3 = document.getElementById("mtech-sem3-table");
+        var x4= document.getElementById("mtech-sem4-table");
+        if (x3.style.display === "none") {
+            x3.style.display = "block";
+        } else {
+            x3.style.display = "none";
+        }
+        x1.style.display = "none";
+        x2.style.display = "none";
+        x4.style.display = "none";
+
+    }
+    function mtechsem4Function() {
+        var x1 = document.getElementById("mtech-sem1-table");
+        var x2 = document.getElementById("mtech-sem2-table");
+        var x3 = document.getElementById("mtech-sem3-table");
+        var x4= document.getElementById("mtech-sem4-table");
+        if (x4.style.display === "none") {
+            x4.style.display = "block";
+        } else {
+            x4.style.display = "none";
+        }
+        x1.style.display = "none";
+        x2.style.display = "none";
+        x3.style.display = "none";
+
+    }
+
     function changeAllContentSection(){
-        var semwise=document.getElementById("sem-wise-content");
-        var allatOnce=document.getElementById("all-content");
-        allatOnce.style.display="block";
-        semwise.style.display="none";
+        if(be) {
+            var semwise = document.getElementById("be-sem-wise-content");
+            var allatOnce = document.getElementById("be-all-content");
+            allatOnce.style.display = "block";
+            semwise.style.display = "none";
+        }
+        else if(mtech){
+            var semwise = document.getElementById("mtech-sem-wise-content");
+            var allatOnce = document.getElementById("mtech-all-content");
+            allatOnce.style.display = "block";
+            semwise.style.display = "none";
+        }
+        else{
+            var semwise = document.getElementById("btech-sem-wise-content");
+            var allatOnce = document.getElementById("btech-all-content");
+            allatOnce.style.display = "block";
+            semwise.style.display = "none";
+        }
     }
     function changeSemSection() {
-        var semwise=document.getElementById("sem-wise-content");
-        var allatOnce=document.getElementById("all-content");
+        if(be) {
+            var semwise = document.getElementById("be-sem-wise-content");
+            var allatOnce = document.getElementById("be-all-content");
+            allatOnce.style.display = "none";
+            semwise.style.display = "block";
+        }
+        else if(mtech){
+            var semwise = document.getElementById("mtech-sem-wise-content");
+            var allatOnce = document.getElementById("mtech-all-content");
+            allatOnce.style.display = "none";
+            semwise.style.display = "block";
+            console.log('mtech sem wise set');
+        }
+        else{
+            var semwise = document.getElementById("btech-sem-wise-content");
+            var allatOnce = document.getElementById("btech-all-content");
+            allatOnce.style.display = "none";
+            semwise.style.display = "block";
+        }
+    }
+    function selectBtech() {
+        var semwise=document.getElementById("btech-sem-wise-content");
+        var allatOnce=document.getElementById("btech-all-content");
+        var mtechsemwise=document.getElementById("mtech-sem-wise-content");
+        var mtechall=document.getElementById("mtech-all-content");
+        var besemwise=document.getElementById("be-sem-wise-content");
+        var beall=document.getElementById("be-all-content");
         allatOnce.style.display="none";
         semwise.style.display="block";
+        // beall.style.display="none";
+        // besemwise.style.display="none";
+        mtechall.style.display="none";
+        mtechsemwise.style.display="none";
+        btech=true;
+        mtech=false;
+        be=false;
+        changeSemSection();
+    }
+    function selectMtech() {
+        var semwise=document.getElementById("btech-sem-wise-content");
+        var allatOnce=document.getElementById("btech-all-content");
+        var mtechsemwise=document.getElementById("mtech-sem-wise-content");
+        var mtechall=document.getElementById("mtech-all-content");
+        var besemwise=document.getElementById("be-sem-wise-content");
+        var beall=document.getElementById("be-all-content");
+        allatOnce.style.display="none";
+        semwise.style.display="none";
+        // beall.style.display="none";
+        // besemwise.style.display="none";
+        mtechall.style.display="none";
+        mtechsemwise.style.display="block";
+
+        console.log('mtech semwise display block set');
+        btech=false;
+        mtech=true;
+        be=false;
+        changeSemSection();
+    }
+    function selectBE() {
+        var semwise=document.getElementById("btech-sem-wise-content");
+        var allatOnce=document.getElementById("btech-all-content");
+        var mtechsemwise=document.getElementById("mtech-sem-wise-content");
+        var mtechall=document.getElementById("mtech-all-content");
+        var besemwise=document.getElementById("be-sem-wise-content");
+        var beall=document.getElementById("be-all-content");
+        allatOnce.style.display="none";
+        semwise.style.display="none";
+        beall.style.display="none";
+        besemwise.style.display="block";
+        mtechall.style.display="none";
+        mtechsemwise.style.display="none";
+        btech=false;
+        mtech=false;
+        be=true;
+        
     }
 
 </script>
